@@ -14,7 +14,7 @@
     <form id="form1" runat="server">
         <!-- LEFT CONTENT (menu) -->
         <div id="leftContent">
-            &nbsp;
+            
         </div>
 
         <div id="mainContent">

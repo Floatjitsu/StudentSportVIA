@@ -3,14 +3,14 @@
 }
 
 body {
-    height: 100%;
+    
 }
 
 #leftContent {
     width: 50%;
     float: left;
     background-image:linear-gradient(to right, #3E4891,#833D3D);
-    height: 100vh;
+    height: 98vh;
 }
 
 #mainContent {
