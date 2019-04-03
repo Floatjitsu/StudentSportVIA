@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/LoginPageMaster.master" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="Login" %>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
     <img src="studentSport_logo.PNG" alt="Sample Photo" />
     <p>
         <asp:Label ID="WelcomeLabel" runat="server" Text="Welcome, Please login to your account"/>
@@ -42,7 +42,7 @@
                             <tr>
                                 <td align="right" colspan="2">
                                     <asp:Button ID="LoginButton" runat="server" CommandName="Login" Text="Log In" ValidationGroup="Login1" CssClass="LoginButton" />
-                                    <asp:Button ID="SignUpButton" runat="server" Text="Sign up" CssClass="SignUpButton" />
+                                    <asp:Button ID="SignUpButton" runat="server" Text="Sign up" CssClass="SignUpButton" OnClick="SignUpButton_Click" />
                                 </td>
                             </tr>
                         </table>
