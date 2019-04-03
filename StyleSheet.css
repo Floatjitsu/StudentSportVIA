@@ -1,0 +1,55 @@
+﻿* {
+    font-family: Asap;
+}
+
+body {
+    height: 100%;
+}
+
+#leftContent {
+    width: 50%;
+    float: left;
+    background-image:linear-gradient(to right, #3E4891,#833D3D);
+    height: 100vh;
+}
+
+#mainContent {
+    width: 50%;
+    float: left;
+    text-align: center;
+    transform: translateX(-70%);
+    transform: translateY(70%);
+}
+
+.Login {
+    text-align: center;
+    margin-left: 35%;
+}
+
+.LoginButton {
+    background: #833D3D;
+    color: #fff;
+    border: none;
+    height: 2.5em;
+    width: 8em;
+    padding: 5px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+.SignUpButton {
+    background: #fff;
+    color: #808080;
+    border: 1px solid black;
+    height: 2.5em;
+    width: 8em;
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+.InputFields {
+    border: none;
+    width: 100%;
+    height: 2.5em;
+    border-bottom: solid 1px #808080;
+}
