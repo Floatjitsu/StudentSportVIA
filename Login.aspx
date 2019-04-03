@@ -13,26 +13,25 @@
                     <td>
                         <table cellpadding="0">                           
                             <tr>
-                                <td align="right">
-                                    <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName">User Name:</asp:Label>
-                                </td>
                                 <td>
-                                    <asp:TextBox ID="UserName" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="UserName" runat="server" placeholder="Username" CssClass="InputFields"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" ControlToValidate="UserName" ErrorMessage="User Name is required." ToolTip="User Name is required." ValidationGroup="Login1">*</asp:RequiredFieldValidator>
                                 </td>
                             </tr>
                             <tr>
-                                <td align="right">
-                                    <asp:Label ID="PasswordLabel" runat="server" AssociatedControlID="Password">Password:</asp:Label>
-                                </td>
                                 <td>
-                                    <asp:TextBox ID="Password" runat="server" TextMode="Password"></asp:TextBox>
+                                    <asp:TextBox ID="Password" runat="server" placeholder="Password" TextMode="Password" CssClass="InputFields"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" ControlToValidate="Password" ErrorMessage="Password is required." ToolTip="Password is required." ValidationGroup="Login1">*</asp:RequiredFieldValidator>
                                 </td>
                             </tr>
                             <tr>
-                                <td colspan="2">
-                                    <asp:CheckBox ID="RememberMe" runat="server" Text="Remember me next time." />
+                                <td algin="left">
+                                    <asp:CheckBox ID="RememberMe" runat="server" Text="Remember me" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    &nbsp;
                                 </td>
                             </tr>
                             <tr>
@@ -42,7 +41,8 @@
                             </tr>
                             <tr>
                                 <td align="right" colspan="2">
-                                    <asp:Button ID="LoginButton" runat="server" CommandName="Login" Text="Log In" ValidationGroup="Login1" />
+                                    <asp:Button ID="LoginButton" runat="server" CommandName="Login" Text="Log In" ValidationGroup="Login1" CssClass="LoginButton" />
+                                    <asp:Button ID="SignUpButton" runat="server" Text="Sign up" CssClass="SignUpButton" />
                                 </td>
                             </tr>
                         </table>
