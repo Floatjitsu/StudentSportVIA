@@ -1,0 +1,104 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>StudentSportWebApplication</Name>
+    <Description>&lt;No description available&gt;</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>StudentSportWebApplication</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="StudentSportWebApplication.csproj" File="StudentSportWebApplication.csproj" ReplaceParameters="true">
+      <Folder Name="images" TargetFolderName="images">
+        <ProjectItem ReplaceParameters="false" TargetFileName="FootballTeacher.jpg">FootballTeacher.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="spongebob.jpg">spongebob.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Sport_teacher.jpg">Sport_teacher.jpg</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Main.Master">Main.Master</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Main.Master.cs">Main.Master.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Main.Master.designer.cs">Main.Master.designer.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="NestedSport.master">NestedSport.master</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="NestedSport.master.cs">NestedSport.master.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="NestedSport.master.designer.cs">NestedSport.master.designer.cs</ProjectItem>
+      <Folder Name="Pages" TargetFolderName="Pages">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Home.aspx">Home.aspx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Home.aspx.cs">Home.aspx.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Home.aspx.designer.cs">Home.aspx.designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Sports.aspx">Sports.aspx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Sports.aspx.cs">Sports.aspx.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Sports.aspx.designer.cs">Sports.aspx.designer.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Sports" TargetFolderName="Sports">
+        <ProjectItem ReplaceParameters="true" TargetFileName="ABS.aspx">ABS.aspx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ABS.aspx.cs">ABS.aspx.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Badminton.aspx">Badminton.aspx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Badminton.aspx.cs">Badminton.aspx.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Basketball.aspx">Basketball.aspx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Basketball.aspx.cs">Basketball.aspx.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Booty.aspx">Booty.aspx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Booty.aspx.cs">Booty.aspx.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Football.aspx">Football.aspx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Football.aspx.cs">Football.aspx.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Football.aspx.designer.cs">Football.aspx.designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Kickboxing.aspx">Kickboxing.aspx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Kickboxing.aspx.cs">Kickboxing.aspx.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="LatinDance.aspx">LatinDance.aspx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="LatinDance.aspx.cs">LatinDance.aspx.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Rugby.aspx">Rugby.aspx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Rugby.aspx.cs">Rugby.aspx.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Stretching.aspx">Stretching.aspx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Stretching.aspx.cs">Stretching.aspx.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Volleyball.aspx">Volleyball.aspx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Volleyball.aspx.cs">Volleyball.aspx.cs</ProjectItem>
+      </Folder>
+      <Folder Name="styles" TargetFolderName="styles">
+        <ProjectItem ReplaceParameters="true" TargetFileName="home.css">home.css</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="navbar.css">navbar.css</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="sport-stylesheet.css">sport-stylesheet.css</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="sports-list.css">sports-list.css</ProjectItem>
+      </Folder>
+      <Folder Name="vendor" TargetFolderName="vendor">
+        <ProjectItem ReplaceParameters="false" TargetFileName="_DS_Store">_DS_Store</ProjectItem>
+        <Folder Name="bootstrap" TargetFolderName="bootstrap">
+          <ProjectItem ReplaceParameters="false" TargetFileName="_DS_Store">_DS_Store</ProjectItem>
+          <Folder Name="css" TargetFolderName="css">
+            <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.css">bootstrap.css</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.css.map">bootstrap.css.map</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.min.css">bootstrap.min.css</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.min.css.map">bootstrap.min.css.map</ProjectItem>
+          </Folder>
+          <Folder Name="js" TargetFolderName="js">
+            <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.bundle.js">bootstrap.bundle.js</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.bundle.js.map">bootstrap.bundle.js.map</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.bundle.min.js">bootstrap.bundle.min.js</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.bundle.min.js.map">bootstrap.bundle.min.js.map</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.js">bootstrap.js</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.js.map">bootstrap.js.map</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.min.js">bootstrap.min.js</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.min.js.map">bootstrap.min.js.map</ProjectItem>
+          </Folder>
+        </Folder>
+        <Folder Name="jquery" TargetFolderName="jquery">
+          <ProjectItem ReplaceParameters="true" TargetFileName="jquery.js">jquery.js</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="jquery.min.js">jquery.min.js</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="jquery.min.map">jquery.min.map</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="jquery.slim.js">jquery.slim.js</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="jquery.slim.min.js">jquery.slim.min.js</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="jquery.slim.min.map">jquery.slim.min.map</ProjectItem>
+        </Folder>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Web.config">Web.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Web.Debug.config">Web.Debug.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Web.Release.config">Web.Release.config</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

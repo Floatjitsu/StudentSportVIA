@@ -1,0 +1,225 @@
+﻿body {
+    background-color: #e5e5e5;
+}
+
+* {
+    box-sizing:border-box;
+}
+
+#sportMainWrapper {
+    font-family: 'Asap', sans-serif;
+    background-color: #e5e5e5;
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-bottom:30px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+/*First top wrapper div*/
+#sportWrapper1 {
+width:100%;
+clear:both;
+overflow:hidden;
+}
+
+#sportName {
+    height: 100px;
+    width: 70%;
+    float: left;
+    background-color: #e5e5e5;
+    padding-top: 30px;
+    font-size: 32px;
+    padding-left: 10px;
+}
+
+#subscribeSport {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 40px;
+    height: 40px;
+    width: 30%;
+    float: left;
+    background-image: linear-gradient(to right, #3E4891,#833D3D);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: white;
+    border-radius:3px;
+}
+
+/*Second sport wrapper div*/
+#sportWrapper2 {
+    overflow:hidden;
+    clear:both;
+}
+
+#wrapperSportInfo {
+    width: 30%;
+    overflow: hidden;
+    float: left;
+}
+
+#sportInfoTitle {
+    height: 40px;
+    background-image: linear-gradient(to right, #3E4891,#833D3D);
+    color: white;
+    clear: both;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+#sportInfoContent {
+    height: 200px;
+    background-color: white;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right:10px;
+}
+
+#teacherName {
+    height: 80px;
+    float: left;
+    width: 60%;
+    text-align: center;
+    padding-top: 7%;
+    font-size: 20px;
+}
+
+/*Div containing the image*/
+#teacherImage {
+    height: 80px;
+    float: left;
+    width: 40%;
+}
+
+/*Reference to the image*/
+.ImageTeacherSport {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 40%;
+}
+
+#sportDescriptionText {
+    float:left;
+    width:100%;
+    height:100px;
+}
+
+
+#wrapperLatestNews {
+    width: 68%;
+    float: left;
+    height: 240px;
+}
+#latestNewsTitle {
+    height: 40px;
+    background-image: linear-gradient(to right, #3E4891,#833D3D);
+    color: white;
+    clear: both;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+#latestNewsContent {
+    background-color: white;
+    height: 200px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+/*Third sport wrapper div*/
+#sportWrapper3 {
+    overflow:hidden;
+    clear:both;
+}
+
+#ScheduleWrapper {
+    font-family: 'Asap', sans-serif;
+    width:68%;
+    float:left;
+    height:240px;
+}
+
+#scheduleTitle {
+    height: 40px;
+    background-image: linear-gradient(to right, #3E4891,#833D3D);
+    color: white;
+    clear: both;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+#scheduleContent {
+    height: 200px;
+    background-color: white;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+#pictureWrapper{
+    width:30%;
+    overflow:hidden;
+    float:left;
+}
+#pictureTitle {
+    height: 40px;
+    background-image: linear-gradient(to right, #3E4891,#833D3D);
+    color: white;
+    clear: both;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+/*Class for divs containing different images from the sport*/
+.sportPicture{
+    height:100px;
+    width:100%;
+}
+
+/*Class for images from the sport*/
+.sportPicture {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#pictureContent {
+    height: 200px;
+    background-color: white;
+}
+
+/*Fourth sport wrapper div*/
+#sportWrapper4 {
+    overflow:hidden;
+    clear:both;
+}
+#chatTitle {
+    background-image: linear-gradient(to right, #3E4891,#833D3D);
+    color: white;
+    height: 40px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+#chatContent {
+    height: 200px;
+    background-color: white;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+
+.verticalDivider {
+    width:2%;
+    float:left;
+}
+
+.horizontalDivider {
+    width:100%;
+    height:15px;
+}

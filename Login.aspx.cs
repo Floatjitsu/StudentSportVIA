@@ -11,7 +11,12 @@ public partial class Login : System.Web.UI.Page
     {
 
     }
+
     protected void SignUpButton_Click(object sender, EventArgs e) {
         Response.Redirect("SignUp.aspx");
+    }
+
+    protected void LoginButton_Click(object sender, EventArgs e) {
+        HttpContext.Current.Response.Redirect("/Pages/Home.aspx");
     }
 }

@@ -1,0 +1,9 @@
+C:\Users\Luca\Desktop\StudentSportWebApplication\StudentSportWebApplication\bin\$safeprojectname$.dll
+C:\Users\Luca\Desktop\StudentSportWebApplication\StudentSportWebApplication\bin\$safeprojectname$.pdb
+C:\Users\Luca\Desktop\StudentSportWebApplication\StudentSportWebApplication\obj\Debug\$safeprojectname$.dll
+C:\Users\Luca\Desktop\StudentSportWebApplication\StudentSportWebApplication\obj\Debug\$safeprojectname$.pdb
+C:\Users\timur\Documents\Visual Studio 2012\Projects\StudentSportWebApplication\StudentSportWebApplication\bin\$safeprojectname$.dll
+C:\Users\timur\Documents\Visual Studio 2012\Projects\StudentSportWebApplication\StudentSportWebApplication\bin\$safeprojectname$.pdb
+C:\Users\timur\Documents\Visual Studio 2012\Projects\StudentSportWebApplication\StudentSportWebApplication\obj\Debug\StudentSportWebApplication.csprojResolveAssemblyReference.cache
+C:\Users\timur\Documents\Visual Studio 2012\Projects\StudentSportWebApplication\StudentSportWebApplication\obj\Debug\$safeprojectname$.dll
+C:\Users\timur\Documents\Visual Studio 2012\Projects\StudentSportWebApplication\StudentSportWebApplication\obj\Debug\$safeprojectname$.pdb

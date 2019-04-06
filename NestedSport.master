@@ -1,0 +1,169 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeFile="NestedSport.master.cs" Inherits="NestedSport" %>
+
+<asp:Content ID="MainHead" ContentPlaceHolderID="head" runat="server">
+    <link href="https://fonts.googleapis.com/css?family=Asap" rel="StyleSheet1"/>
+    <link href="../styles/sport-stylesheet.css" rel="stylesheet" />
+    <title></title>
+    <%-- The following place holder refers to changes in the head of the .aspx page --%>
+    <asp:ContentPlaceHolder ID="SportASPXHead" runat="server">
+
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+
+
+
+    
+
+    
+<%-- The master page will work inside the main content place holder of the main master page --%> 
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
+
+        <!-- A main wrapper contains all the  page-->
+    <div id="sportMainWrapper">
+        
+        <!--Here start the wrapper 1-->
+        <div id="sportWrapper1">
+        <div id="sportName">
+           
+            <!--ContentPalceHolderTitlte is the one with the name of the sport-->
+             <asp:ContentPlaceHolder ID="ContentPlaceHolderTitle" runat="server">
+        
+             </asp:ContentPlaceHolder>
+
+        </div>
+
+        <!--Using a parent div to center the subscribe div-->
+            <div id="subscribeSport">
+            Subscribe to this sport +
+                  </div>
+                </div>
+        <div class="horizontalDivider">
+        </div>
+
+        <!--Here start the wrapper 2-->
+        <div id="sportWrapper2">
+            <div id="wrapperSportInfo">
+            <div id="sportInfoTitle">
+                Sport info
+            </div>
+                <div id="sportInfoContent">
+                    <div id="teacherName">
+                        <asp:ContentPlaceHolder ID="TeacherNameContentPlaceHolder" runat="server">
+        
+               </asp:ContentPlaceHolder>
+                    
+                    </div>
+                    <div id="teacherImage">
+                         <asp:ContentPlaceHolder ID="TeacherImageContentPlaceHolder" runat="server">
+        
+               </asp:ContentPlaceHolder>
+                    </div>
+                    <div id="sportDescriptionText">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+  
+                    </div>
+                </div>
+        </div>
+
+            <div class="verticalDivider">
+                &nbsp;
+            </div>
+
+            <div id="wrapperLatestNews">
+            <div id="latestNewsTitle">
+                Latest news
+            </div>
+            <div id="latestNewsContent">
+                News content here
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        
+                
+                </asp:ContentPlaceHolder>
+            </div>
+            </div>
+            </div>
+
+        <div class="horizontalDivider">
+            &nbsp;
+        </div>
+
+        <!-- Here start the Wrapper 3-->
+        <div id="sportWrapper3">
+        <div id="ScheduleWrapper">
+            <div id="scheduleTitle">
+                Schedule
+            </div>
+            <div id="scheduleContent">
+                Here the schedule...
+                 <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+        
+                
+                </asp:ContentPlaceHolder>
+
+            </div>
+        </div>   
+             <div class="verticalDivider">
+                 &nbsp;
+            </div>
+            <div id="pictureWrapper">
+                <div id="pictureTitle">
+                    Pictures
+                </div>
+                <div id="pictureContent">
+                    <div class="sportPicture">
+                           <asp:ContentPlaceHolder ID="Picture1ContentPlaceHolder" runat="server">
+
+                            </asp:ContentPlaceHolder>
+                    </div>
+                    <div class="sportPicture">
+                        <asp:ContentPlaceHolder ID="Picture2ContentPlaceHolder" runat="server">
+
+                            </asp:ContentPlaceHolder>
+                    </div>
+                 <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+        
+                
+                </asp:ContentPlaceHolder>
+
+                </div>
+                </div>
+        </div>
+
+        <div class="horizontalDivider">
+             &nbsp;
+        </div>
+
+        <!-- Here start the Wrapper 4-->
+        <div id="sportWrapper4">
+            <div id="chatTitle">
+                Chat
+            </div>
+            <div id="chatContent">
+                Here the chat...
+                <br />
+                <br />
+                We can implement the chat here, without any kind of ContentPlaceHolder
+                
+            </div>
+
+        </div>
+          
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+</asp:Content>
+   
+
