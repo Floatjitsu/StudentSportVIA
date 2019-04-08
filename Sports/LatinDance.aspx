@@ -20,7 +20,7 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <p style="text-align:justify; padding-right:5px">
+    <p style="text-align:justify; font-size:12px;">
         Types of ballroom dance and folk dance that originated in Latin America.
         The category of Latin dances in the international dancesport competitions consists
         of the cha-cha-cha, rumba, samba, paso doble, and also the jive of United States origin.

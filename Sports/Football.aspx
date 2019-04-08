@@ -20,7 +20,7 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <p style="text-align:justify; font-size:14px;">
+    <p style="text-align:justify; font-size:12px;">
         Two opposing teams of 11 players each defend goals at opposite ends of a field having goal posts at each end.
         Points are being scored chiefly by carrying the ball across the opponent's goal
         line and by place-kicking or drop-kicking the ball over the crossbar between the opponent's goal posts.</p>

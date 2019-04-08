@@ -21,9 +21,9 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <p style="text-align:justify">
+    <p style="text-align:justify; font-size:15px;">
        Played by two teams of usually five players each on a rectangular court having
-        a raised basket or goal at each end, points being scored by tossing the ball through the opponent's basket.
+       a raised basket or goal at each end, points being scored by tossing the ball through the opponent's basket.
     </p>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">

@@ -21,7 +21,7 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <p style="text-align:justify">
+    <p style="text-align:justify; font-size:14px">
     ABS exercises deserve as much time and attention as any other muscle group in your body,
        so it's important to do the right exercises to get that dream, cobblestone torso. Thankfully, we have just the moves for you.    
     </p>

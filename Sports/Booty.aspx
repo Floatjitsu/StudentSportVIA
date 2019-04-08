@@ -20,7 +20,7 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <p style="text-align:justify">
+    <p style="text-align:justify; font-size:13px;">
         
         If you're looking to sculpt a strong backside, look no further than personal trainer Margaret Lindsey.
         Margaret is the queen of booty-sculpting, and she's helped plenty of clients totally transform their butts with her workouts.

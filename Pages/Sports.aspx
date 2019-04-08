@@ -28,7 +28,7 @@
                 <div class="square" style="background-color:green">&nbsp;</div>
         </a>
 
-        <a class="sportContainer" href="../Sports/Volleyball.aspx">
+        <a class="sportContainer" href="../Sports/Kickboxing.aspx">
                 <p class="sportName">Kickboxing</p>
                 <div class="square" style="background-color:yellow">&nbsp;</div>
         </a>
@@ -48,7 +48,7 @@
                 <div class="square" style="background-color:lightsalmon">&nbsp;</div>
         </a>
 
-        <a class="sportContainer" href="../Sports/Streching.aspx">
+        <a class="sportContainer" href="../Sports/Stretching.aspx">
                 <p class="sportName">Stretching</p>
                 <div class="square" style="background-color:darkcyan">&nbsp;</div>
         </a>
@@ -68,7 +68,7 @@
                 <div class="square" style="background-color:mediumpurple">&nbsp;</div>
         </a>
 
-        <a class="sportContainer" href="link.aspx">
+        <a class="sportContainer" href="../Sports/DanceHall.aspx">
                 <p class="sportName">Dance Hall</p>
                 <div class="square" style="background-color:springgreen">&nbsp;</div>
         </a>
@@ -78,7 +78,7 @@
                 <div class="square" style="background-color:powderblue">&nbsp;</div>
         </a>
 
-        <a class="sportContainer" href="link.aspx">
+        <a class="sportContainer" href="../Sports/X-Fit.aspx">
                 <p class="sportName">X-Fit</p>
                 <div class="square" style="background-color:darkorange">&nbsp;</div>
         </a>
@@ -98,7 +98,7 @@
                 <div class="square" style="background-color:darkgoldenrod">&nbsp;</div>
         </a>
 
-        <a class="sportContainer" href="link.aspx">
+        <a class="sportContainer" href="../Sports/Powerlifting.aspx"">
                 <p class="sportName">Powerlifting</p>
                 <div class="square" style="background-color:darkturquoise">&nbsp;</div>
         </a>

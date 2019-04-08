@@ -20,7 +20,7 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <p style="text-align:justify">
+    <p style="text-align:justify; font-size:14px;">
         Flexibility work is important for a well-rounded fitness routine as strength and cardio work.
         Stretching exercises will help you improve flexibility, reduce tightness, and ultimately, make your workouts more efficient and safe.
 

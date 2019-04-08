@@ -57,19 +57,88 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\abs1.jpg" />
+    <Content Include="images\abs2.jpg" />
+    <Content Include="images\absCoach.jpg" />
+    <Content Include="images\Badminton1.jpg" />
+    <Content Include="images\Badminton2.jpg" />
+    <Content Include="images\badmintonTeacher.jpg" />
+    <Content Include="images\Basketball1.jpg" />
+    <Content Include="images\Basketball2.jpg" />
+    <Content Include="images\basketballTeacher.jpg" />
+    <Content Include="images\booty1.jpg" />
+    <Content Include="images\booty2.jpg" />
+    <Content Include="images\bootyCoach.jpg" />
+    <Content Include="images\Calisthenics1.jpg" />
+    <Content Include="images\Calisthenics2.jpg" />
+    <Content Include="images\CalisthenicsTeacher.jpg" />
+    <Content Include="images\Cardio1.jpg" />
+    <Content Include="images\Cardio2.jpg" />
+    <Content Include="images\CardioTeacher.jpg" />
+    <Content Include="images\Climbing1.jpg" />
+    <Content Include="images\Climbing2.jpg" />
+    <Content Include="images\ClimbingTeacher.jpg" />
+    <Content Include="images\Dancehall1.jpg" />
+    <Content Include="images\Dancehall2.jpg" />
+    <Content Include="images\DancehallTeacher.jpg" />
+    <Content Include="images\Dodgeball1.jpg" />
+    <Content Include="images\Dodgeball2.jpg" />
+    <Content Include="images\DodgeballTeacher.jpg" />
+    <Content Include="images\Fitness1.jpg" />
+    <Content Include="images\Fitness2.jpg" />
+    <Content Include="images\FitnessTeacher.jpg" />
     <Content Include="images\FootballTeacher.jpg" />
+    <Content Include="images\kickboxing1.jpg" />
+    <Content Include="images\kickboxing2.jpg" />
+    <Content Include="images\KickboxingCoach.jpg" />
+    <Content Include="images\latinDance1.jpg" />
+    <Content Include="images\latinDance2.jpg" />
+    <Content Include="images\latinDanceCoach.jpg" />
+    <Content Include="images\Powerlifting1.jpg" />
+    <Content Include="images\Powerlifting2.jpg" />
+    <Content Include="images\PowerliftingTeacher.jpg" />
+    <Content Include="images\rugby1.jpg" />
+    <Content Include="images\rugby2.jpg" />
+    <Content Include="images\rugbyCoach.jpg" />
+    <Content Include="images\Soccer1.jpg" />
+    <Content Include="images\soccer2.jpg" />
     <Content Include="images\spongebob.jpg" />
     <Content Include="images\Sport_teacher.jpg" />
+    <Content Include="images\stretching1.jpg" />
+    <Content Include="images\stretching2.jpg" />
+    <Content Include="images\stretchingCoach.jpg" />
+    <Content Include="images\Tabata1.jpg" />
+    <Content Include="images\Tabata2.jpg" />
+    <Content Include="images\TabataTeacher.jpg" />
+    <Content Include="images\volleyball1.jpg" />
+    <Content Include="images\volleyball2.jpg" />
+    <Content Include="images\volleyballTeacher.jpg" />
+    <Content Include="images\Weightlifting1.jpg" />
+    <Content Include="images\Weightlifting2.jpg" />
+    <Content Include="images\WeightliftingTeacher.jpg" />
+    <Content Include="images\XFit1.jpg" />
+    <Content Include="images\XFit2.jpg" />
+    <Content Include="images\XFitTeacher.jpg" />
     <Content Include="Pages\Sports.aspx" />
     <Content Include="Sports\ABS.aspx" />
     <Content Include="Sports\Badminton.aspx" />
     <Content Include="Sports\Basketball.aspx" />
     <Content Include="Sports\Booty.aspx" />
+    <Content Include="Sports\Calisthenics.aspx" />
+    <Content Include="Sports\Cardio.aspx" />
+    <Content Include="Sports\Climbing.aspx" />
+    <Content Include="Sports\DanceHall.aspx" />
+    <Content Include="Sports\Dodgeball.aspx" />
+    <Content Include="Sports\Fitness.aspx" />
     <Content Include="Sports\Kickboxing.aspx" />
     <Content Include="Sports\LatinDance.aspx" />
+    <Content Include="Sports\Powerlifting.aspx" />
     <Content Include="Sports\Rugby.aspx" />
     <Content Include="Sports\Stretching.aspx" />
+    <Content Include="Sports\Tabata.aspx" />
     <Content Include="Sports\Volleyball.aspx" />
+    <Content Include="Sports\Weightlifting.aspx" />
+    <Content Include="Sports\X-Fit.aspx" />
     <Content Include="styles\home.css" />
     <Content Include="styles\navbar.css" />
     <Content Include="styles\sport-stylesheet.css" />
@@ -134,9 +203,54 @@
       <DependentUpon>Booty.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Sports\Calisthenics.aspx.cs">
+      <DependentUpon>Calisthenics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sports\Calisthenics.aspx.designer.cs">
+      <DependentUpon>Calisthenics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sports\Cardio.aspx.cs">
+      <DependentUpon>Cardio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sports\Cardio.aspx.designer.cs">
+      <DependentUpon>Cardio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sports\Climbing.aspx.cs">
+      <DependentUpon>Climbing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sports\Climbing.aspx.designer.cs">
+      <DependentUpon>Climbing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sports\DanceHall.aspx.cs">
+      <DependentUpon>DanceHall.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sports\DanceHall.aspx.designer.cs">
+      <DependentUpon>DanceHall.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sports\Dodgeball.aspx.cs">
+      <DependentUpon>Dodgeball.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sports\Dodgeball.aspx.designer.cs">
+      <DependentUpon>Dodgeball.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sports\Fitness.aspx.cs">
+      <DependentUpon>Fitness.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sports\Fitness.aspx.designer.cs">
+      <DependentUpon>Fitness.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Sports\Football.aspx.cs">
       <DependentUpon>Football.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sports\Football.aspx.designer.cs">
+      <DependentUpon>Football.aspx</DependentUpon>
     </Compile>
     <Compile Include="Sports\Kickboxing.aspx.cs">
       <DependentUpon>Kickboxing.aspx</DependentUpon>
@@ -146,6 +260,13 @@
       <DependentUpon>LatinDance.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Sports\Powerlifting.aspx.cs">
+      <DependentUpon>Powerlifting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sports\Powerlifting.aspx.designer.cs">
+      <DependentUpon>Powerlifting.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Sports\Rugby.aspx.cs">
       <DependentUpon>Rugby.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -154,9 +275,30 @@
       <DependentUpon>Stretching.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Sports\Tabata.aspx.cs">
+      <DependentUpon>Tabata.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sports\Tabata.aspx.designer.cs">
+      <DependentUpon>Tabata.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Sports\Volleyball.aspx.cs">
       <DependentUpon>Volleyball.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sports\Weightlifting.aspx.cs">
+      <DependentUpon>Weightlifting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sports\Weightlifting.aspx.designer.cs">
+      <DependentUpon>Weightlifting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sports\X-Fit.aspx.cs">
+      <DependentUpon>X-Fit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sports\X-Fit.aspx.designer.cs">
+      <DependentUpon>X-Fit.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

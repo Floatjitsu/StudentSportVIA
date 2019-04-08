@@ -21,7 +21,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
-    <p style="text-align:justify;">
+    <p style="text-align:justify; font-size:14px;">
       Group of stand-up combat sports based on kicking and punching, historically developed from karate mixed with boxing.
       Kickboxing is practiced for self-defence, general fitness, or as a contact sport.
     </p>
