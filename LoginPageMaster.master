@@ -1,6 +1,10 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="LoginPageMaster.master.cs" Inherits="LoginPageMaster" %>
 
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
 <!DOCTYPE html>
+
+
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -12,6 +16,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <asp:ToolkitScriptManager ID="ToolScriptManager1" runat="server"></asp:ToolkitScriptManager>
         <!-- LEFT CONTENT (menu) -->
         <div id="leftContent">
             
@@ -21,8 +26,7 @@
             <asp:ContentPlaceHolder id="MainContent" runat="server">
         
             </asp:ContentPlaceHolder>
-        </div>
-      
+        </div>  
         
     
     </form>

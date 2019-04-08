@@ -4,11 +4,48 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using System.Configuration;
 
 public partial class SignUp : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+       
 
+    }
+    protected void CreateUserWizard1_CreatedUser(object sender, EventArgs e) {
+        //Extract the data from the CreateUserWizard control
+        string viaId = ((TextBox)CreateUserWizard1.CreateUserStep.ContentTemplateContainer.FindControl("UserName")).Text;
+        string firstName = ((TextBox)CreateUserWizard1.CreateUserStep.ContentTemplateContainer.FindControl("TextBoxFirstName")).Text;
+        string surname = ((TextBox)CreateUserWizard1.CreateUserStep.ContentTemplateContainer.FindControl("TextBoxSurname")).Text;
+
+        //Get default connection string/path to our database from the webconfig file
+        string dbString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+
+        //Create a connection to our database
+        SqlConnection con = new SqlConnection(dbString);
+
+
+        string sqlCommandString = "INSERT INTO users (viaId, firstName, surname) VALUES (@viaId, @firstName, @surname)";
+
+        //Open the database connection
+        con.Open();
+       
+        SqlCommand sqlCmd = new SqlCommand(sqlCommandString, con);
+
+        //Fill in the parameters in our prepared SQL statement      
+        sqlCmd.Parameters.AddWithValue("@viaId", Int32.Parse(viaId));
+        sqlCmd.Parameters.AddWithValue("@firstName", firstName);
+        sqlCmd.Parameters.AddWithValue("@surname", surname);
+
+        //Execute the sqlCmd
+        sqlCmd.ExecuteNonQuery();
+
+        //Close the connection to the database
+        con.Close();
+
+        //Redirect to the Login Page
+        Response.Redirect("Login.aspx");
     }
 }

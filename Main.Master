@@ -3,23 +3,23 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<head runat="server">
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 
   <title>Student Sport</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="~/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
 
   <!-- Custom styles for the sidebar -->
-  <link href="../styles/navbar.css" rel="stylesheet">
+  <link href="~/styles/navbar.css" rel="stylesheet"/>
 
   <!-- Custom styles for other parts -->
 
     
-  <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">    
+  <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet"/>    
 
   <%-- The following place holder refers to changes in the head of the nested master page --%>
   <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
@@ -27,19 +27,29 @@
 </head>
 
 <body>
+     <form id="form1" runat="server">
 
+         <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server"  ShowStartingNode="false" />  
   <div class="d-flex" id="wrapper">
 
     <!-- Sidebar -->
     <div class="bg-light border-right" id="sidebar-wrapper">
       <div class="sidebar-heading">Student Sport </div>
-      <div class="list-group list-group-flush">
+         <asp:Menu ID="Menu" runat="server" DataSourceID="SiteMapDataSource1" Orientation="Vertical" >
+    <LevelMenuItemStyles>
+        <asp:MenuItemStyle CssClass="main_menu" />
+        <asp:MenuItemStyle CssClass="level_menu" />
+    </LevelMenuItemStyles>
+</asp:Menu>
+        <!--
+        <div class="list-group list-group-flush">
         <a href="../Pages/Home.aspx" class="list-group-item list-group-item-action bg-light">Home</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Schedule</a>
         <a href="../Pages/Sports.aspx" class="list-group-item list-group-item-action bg-light">Sports</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Chat Room</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Parameters</a>
       </div>
+        -->
     </div>
     <!-- /#sidebar-wrapper -->
 
@@ -52,7 +62,6 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             <li class="nav-item">
@@ -60,7 +69,16 @@
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                UserNAME
+                  <!-- Showing the VIA ID once you are logged in -->
+                  <asp:LoginView ID="LoginView1" runat="server">
+                      <AnonymousTemplate>
+                          Welcome: Guest
+                      </AnonymousTemplate>
+                      <LoggedInTemplate>
+                          Welcome: <asp:LoginName ID="LoginName1" runat="server" />
+                          <asp:LoginStatus ID="LoginStatus1" runat="server" />
+                      </LoggedInTemplate>
+                  </asp:LoginView>
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="#">Action 1</a>
@@ -74,16 +92,18 @@
       </nav>
 
 
-      <form id="form1" runat="server">
+     
         <div>
             <!-- Main Content of the web page, this can be substituted with other master pages-->
             <asp:ContentPlaceHolder ID="MainContentPlaceHolder" runat="server">
             </asp:ContentPlaceHolder>
         </div>
-    </form>
+    
+        </div>
+    </div>
+ </form>
 
-    </div>
-    </div>
+    
              
 
 

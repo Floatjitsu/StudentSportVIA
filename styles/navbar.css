@@ -3,6 +3,60 @@
     font-family: 'Asap', sans-serif;
 }
 
+.main_menu
+    {
+        width: 200px;
+        background-color: #8AE0F2;
+        color: #000;
+        text-align: center;
+        height: 30px;
+        line-height: 30px;
+    }
+    .level_menu
+    {
+        width: 150px;
+        background-color: aliceblue;
+        color: black;
+        text-align: center;
+        height: 30px;
+        line-height: 30px;
+    }
+    .selected
+    {
+        background-color:purple;
+        color: #fff;
+    }
+/*
+.topmenu {
+    text-align:center;
+    font-size:15px;
+    background-color:white;
+    width:100%;
+    }
+
+
+.level1 static {
+    width:100%;
+}
+.menunode
+{
+    text-align:center;
+    height:30px;
+    width:100%;
+    border-bottom:solid;
+    border-bottom-width:3px;
+    border-bottom-color:black;
+    
+}
+
+.dynamicmenunode
+{
+    color:#FFFFFF;
+    background-color:#0094ff;
+    margin:0px 2px;
+    width:128px;    
+}
+*/
 .btn-primary{
     background-color:#833D3D;
     border-color:#3E4891;
@@ -27,6 +81,7 @@
   -moz-transition: margin .25s ease-out;
   -o-transition: margin .25s ease-out;
   transition: margin .25s ease-out;
+  
 }
 
 #sidebar-wrapper .sidebar-heading {

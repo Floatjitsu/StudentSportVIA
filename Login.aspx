@@ -6,7 +6,7 @@
         <asp:Label ID="WelcomeLabel" runat="server" Text="Welcome, Please login to your account"/>
     </p>
     
-    <asp:Login ID="Login1" runat="server" CssClass="Login">
+    <asp:Login ID="Login1" runat="server" CssClass="Login" OnLoggedIn="LoginButton_Click">
         <LayoutTemplate>
             <table cellpadding="1" cellspacing="0" style="border-collapse:collapse;">
                 <tr>
@@ -41,7 +41,7 @@
                             </tr>
                             <tr>
                                 <td align="right" colspan="2">
-                                    <asp:Button ID="LoginButton" runat="server" CommandName="Login" Text="Log In" ValidationGroup="Login1" CssClass="LoginButton" OnClick="LoginButton_Click"/>
+                                    <asp:Button ID="LoginButton" runat="server" CommandName="Login" Text="Log In" ValidationGroup="Login1" CssClass="LoginButton"/>
                                     <asp:Button ID="SignUpButton" runat="server" Text="Sign up" CssClass="SignUpButton" OnClick="SignUpButton_Click" />
                                 </td>
                             </tr>
