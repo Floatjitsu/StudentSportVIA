@@ -76,7 +76,7 @@
                       </AnonymousTemplate>
                       <LoggedInTemplate>
                           Welcome: <asp:LoginName ID="LoginName1" runat="server" />
-                          <asp:LoginStatus ID="LoginStatus1" runat="server" />
+                          <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" LogoutPageUrl="~/Login.aspx" />
                       </LoggedInTemplate>
                   </asp:LoginView>
               </a>

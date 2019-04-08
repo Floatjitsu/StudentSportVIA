@@ -13,6 +13,11 @@ body {
     height: 98vh;
 }
 
+#loginWrapper {
+    display: inline-block;
+    vertical-align: middle;
+} 
+
 #mainContent {
     width: 50%;
     float: left;

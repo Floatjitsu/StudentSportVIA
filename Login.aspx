@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/LoginPageMaster.master" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="Login" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
+    <div id="loginWrapper">
     <img src="studentSport_logo.PNG" alt="Sample Photo" />
     <p>
         <asp:Label ID="WelcomeLabel" runat="server" Text="Welcome, Please login to your account"/>
@@ -51,5 +52,6 @@
             </table>
         </LayoutTemplate>
     </asp:Login>
+   </div>
 </asp:Content>
 
