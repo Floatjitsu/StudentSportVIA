@@ -17,6 +17,6 @@ public partial class Login : System.Web.UI.Page
     }
 
     protected void LoginButton_Click(object sender, EventArgs e) {
-        HttpContext.Current.Response.Redirect("/Pages/Home.aspx");
+        HttpContext.Current.Response.Redirect("~/Pages/Home.aspx");
     }
 }
