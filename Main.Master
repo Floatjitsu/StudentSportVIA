@@ -41,16 +41,6 @@
                 <asp:MenuItemStyle CssClass="level_menu" />
             </LevelMenuItemStyles>
         </asp:Menu>
-        
-        <!--
-        <div class="list-group list-group-flush">
-        <a href="../Pages/Home.aspx" class="list-group-item list-group-item-action bg-light">Home</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Schedule</a>
-        <a href="../Pages/Sports.aspx" class="list-group-item list-group-item-action bg-light">Sports</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Chat Room</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Parameters</a>
-      </div>
-        -->
     </div>
     <!-- /#sidebar-wrapper -->
 
@@ -64,9 +54,6 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Notifications</a>
-            </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <!-- Showing the VIA ID once you are logged in -->
@@ -76,16 +63,18 @@
                       </AnonymousTemplate>
                       <LoggedInTemplate>
                           Welcome: <asp:LoginName ID="LoginName1" runat="server" />
-                          <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" LogoutPageUrl="~/Login.aspx" />
                       </LoggedInTemplate>
-                  </asp:LoginView>
+                      </asp:LoginView>
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action 1</a>
-                <a class="dropdown-item" href="#">Action 2</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Log Out</a>
+                <a class="dropdown-item" href="#">Parameters</a>
+                
+                <div class="dropdown-divider"></div>   
+                    <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" LogoutPageUrl="~/Login.aspx" CssClass="logout"  />
+                  
+                
               </div>
+                
             </li>
           </ul>
         </div>

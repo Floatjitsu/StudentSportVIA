@@ -36,6 +36,11 @@
   
 }
 
+.logout {
+    margin-left: 23px;
+    color: #000;
+}
+
 a:hover {
 color:black;
 font-weight:bold;
