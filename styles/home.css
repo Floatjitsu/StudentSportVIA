@@ -79,3 +79,43 @@ h1 {
     height:250px;
 }
 
+.bg-pi {
+    background-color:white;
+    height:820px;
+}
+
+.back-button {
+    height: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    right: 0;
+    position: absolute;
+}
+
+.pi-title {
+    text-align:center;
+    padding-top:100px;
+    
+}
+
+.bg-title-color {
+    background-image:linear-gradient(to right, #3E4891,#833D3D);
+    padding-top:15px;
+    padding-bottom:15px;
+}
+
+.bg-title {
+    color:white;
+    padding-left:30%;
+    padding-right:30%;
+
+}
+
+.pi-text {
+    background-color:#E5E5E5;
+    margin-left:30%;
+    margin-right:30%;
+    margin-top:5%;
+    padding:50px;
+}
+

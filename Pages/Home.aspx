@@ -11,8 +11,9 @@
             
                 <img src="../images/spongebob.jpg" class="imgRow" />
             
-                <img src="../images/spongebob.jpg"  class="imgRow" id="middleImg"/>
-           
+                <a href="PaymentInfo.aspx">
+                    <img src="../images/spongebob.jpg"  class="imgRow" id="middleImg"/>
+                </a>           
                 <img src="../images/spongebob.jpg"  class="imgRow" />
           
         </div>
