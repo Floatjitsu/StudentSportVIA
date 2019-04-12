@@ -3,15 +3,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContentPlaceHolder" Runat="Server">
-
     <div id="UserListDiv">
-        Here the user list:
+        <h4> Unregistered Users </h4>
 
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="viaId" DataSourceID="SqlDataSource1">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="viaId" DataSourceID="SqlDataSource1" CellPadding="6">
             <Columns>
-                <asp:BoundField DataField="firstName" HeaderText="firstName" SortExpression="firstName" />
-                <asp:BoundField DataField="surname" HeaderText="surname" SortExpression="surname" />
-                <asp:BoundField DataField="viaId" HeaderText="viaId" ReadOnly="True" SortExpression="viaId" />
+                <asp:BoundField DataField="firstName" HeaderText="First Name" SortExpression="firstName" />
+                <asp:BoundField DataField="surname" HeaderText="Surname" SortExpression="surname" />
+                <asp:BoundField DataField="viaId" HeaderText="VIA ID" ReadOnly="True" SortExpression="viaId"/>
             </Columns>
         </asp:GridView>
 
@@ -23,29 +22,27 @@
     </div>
 
     <div id="SetRoleDiv">
+        <h5> Register User </h5>
         <table>
             <tr>
-       <td> <asp:Label ID="Label1" runat="server" Text="Label">VIA_ID: </asp:Label> </td>
-        <td> <asp:TextBox ID="TextBoxID" runat="server"></asp:TextBox> </td>
-              <!-- Only numbers are allowed -->
-                <asp:FilteredTextBoxExtender ID="FilteredTextBoxExtender1" runat="server" TargetControlID="TextBoxID" FilterType="Numbers" />
-                                
-                </tr>
-        <!--Adding a dropdown list to select the created user's role-->
-                   <tr>
-                       <td>
-                                 <asp:Label ID="RoleLabel" runat="server" AssociatedControlID="RoleList">User Role:</asp:Label>
-                            </td>
-                            <td>
-                                <asp:DropDownList ID="RoleList" runat="server" Width="173px"></asp:DropDownList>
-                            </td>
-                        </tr>
-
+                <td> <asp:Label ID="Label1" runat="server" Text="VIA ID" /> </td>
+                <td>
+                     <asp:TextBox ID="TextBoxID" runat="server" />
+                     <asp:RequiredFieldValidator ID="ViaIdFieldValidator" runat="server" ErrorMessage="VIA ID is required" ControlToValidate="TextBoxID" ForeColor="#800000" />
+                </td>
+                <!-- Only numbers are allowed -->
+                <asp:FilteredTextBoxExtender ID="FilteredTextBoxExtender1" runat="server" TargetControlID="TextBoxID" FilterType="Numbers" />                              
+            </tr>
+                <!--Adding a dropdown list to select the created user's role-->
             <tr>
-                <td></td>
-                <td>  <asp:Button ID="Button1" runat="server" Text="Update info" /></td>
+                <td> <asp:Label ID="RoleLabel" runat="server" AssociatedControlID="RoleList" Text="User Role"/> </td>
+                <td> <asp:DropDownList ID="RoleList" runat="server" Width="173px" /> </td>
+            </tr>
+            <tr>
+                <td> </td>
+                <td> <asp:Button ID="ButtonRegisterUser" runat="server" Text="Register User" OnClick="ButtonRegisterUser_Click" /></td>
               </tr>
-            </table>
+        </table>
     </div>
 
 </asp:Content>
