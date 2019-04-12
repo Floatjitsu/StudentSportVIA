@@ -62,7 +62,7 @@
                           Welcome: Guest
                       </AnonymousTemplate>
                       <LoggedInTemplate>
-                          Welcome: <asp:LoginName ID="LoginName1" runat="server" />
+                          Welcome: <asp:Label ID="LabelFirstName" runat="server" Text="Test" />
                       </LoggedInTemplate>
                       </asp:LoginView>
               </a>
