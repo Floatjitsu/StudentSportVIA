@@ -29,18 +29,66 @@
 <body>
      <form id="form1" runat="server">
          <asp:ToolkitScriptManager ID ="ToolkitScriptManager1" runat="server"></asp:ToolkitScriptManager>
-         <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" SiteMapProvider="WebSiteMap" ShowStartingNode="false" />  
+         
+         <asp:SiteMapDataSource ID="AdminSiteMapDataSource" runat="server" SiteMapProvider="AdminSiteMap" ShowStartingNode="false" /> 
+         <asp:SiteMapDataSource ID="TeacherSiteMapDataSource" runat="server" SiteMapProvider="TeacherSiteMap" ShowStartingNode="false" /> 
+         <asp:SiteMapDataSource ID="RegisteredStudentSiteMapDataSource" runat="server" SiteMapProvider="RegisteredStudentSiteMap" ShowStartingNode="false" /> 
+         <asp:SiteMapDataSource ID="UnregisteredStudentSiteMapDataSource" runat="server" SiteMapProvider="UnregisteredStudentSiteMap" ShowStartingNode="false" /> 
   <div class="d-flex" id="wrapper">
 
     <!-- Sidebar -->
     <div class="bg-light border-right" id="sidebar-wrapper">
       <div class="sidebar-heading">Student Sport </div>
-         <asp:Menu ID="Menu" runat="server" DataSourceID="SiteMapDataSource1" Orientation="Vertical" >
-            <LevelMenuItemStyles>
-                <asp:MenuItemStyle CssClass="main_menu" />
-                <asp:MenuItemStyle CssClass="level_menu" />
-            </LevelMenuItemStyles>
-        </asp:Menu>
+           <asp:LoginView ID="LoginView2" runat="server">
+                <AnonymousTemplate>
+                     <asp:Menu ID="Menu" runat="server" DataSourceID="AdminSiteMapDataSource" Orientation="Vertical" >
+                        <LevelMenuItemStyles>
+                            <asp:MenuItemStyle CssClass="main_menu" />
+                        </LevelMenuItemStyles>
+                    </asp:Menu>
+                </AnonymousTemplate>
+               <RoleGroups> 
+                    <asp:RoleGroup Roles="unregisteredStudent">
+                        <ContentTemplate>
+                            <asp:Menu ID="Menu" runat="server" DataSourceID="UnregisteredStudentSiteMapDataSource" Orientation="Vertical" >
+                                <LevelMenuItemStyles>
+                                    <asp:MenuItemStyle CssClass="main_menu" />
+                                </LevelMenuItemStyles>
+                            </asp:Menu>
+                        </ContentTemplate>
+                    </asp:RoleGroup>
+                       
+                    <asp:RoleGroup Roles="registeredStudent">
+                        <ContentTemplate>
+                            <asp:Menu ID="Menu" runat="server" DataSourceID="RegisteredStudentSiteMapDataSource" Orientation="Vertical" >
+                                <LevelMenuItemStyles>
+                                    <asp:MenuItemStyle CssClass="main_menu" />
+                                </LevelMenuItemStyles>
+                            </asp:Menu>
+                        </ContentTemplate>
+                                
+                    </asp:RoleGroup>
+                    <asp:RoleGroup Roles="teacher">
+                        <ContentTemplate>
+                            <asp:Menu ID="Menu" runat="server" DataSourceID="TeacherSiteMapDataSource" Orientation="Vertical" >
+                                <LevelMenuItemStyles>
+                                    <asp:MenuItemStyle CssClass="main_menu" />
+                                </LevelMenuItemStyles>
+                            </asp:Menu>
+                        </ContentTemplate>
+                    </asp:RoleGroup>
+                    <asp:RoleGroup Roles="admin">
+                        <ContentTemplate>   
+                            <asp:Menu ID="Menu" runat="server" DataSourceID="AdminSiteMapDataSource" Orientation="Vertical" >
+                                <LevelMenuItemStyles>
+                                    <asp:MenuItemStyle CssClass="main_menu" />
+                                </LevelMenuItemStyles>
+                            </asp:Menu>
+                        </ContentTemplate>
+                                
+                    </asp:RoleGroup>
+                </RoleGroups>
+            </asp:LoginView>
     </div>
     <!-- /#sidebar-wrapper -->
 

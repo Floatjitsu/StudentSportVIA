@@ -4,9 +4,6 @@
     <siteMapNode url="~/Pages/Home.aspx" title="Home"  description=""/>
     <siteMapNode url="~/Pages/PaymentInfo.aspx" title="Payment Informations"  description=""/>
     <siteMapNode url="#" title="Schedule"  description=""/>
-    <siteMapNode url="~/Pages/RoomBooking.aspx" title="Room Booking"  description="Book a room"/>
     <siteMapNode url="~/Pages/Sports.aspx" title="Sports"  description=""/>
-    <siteMapNode url="~/Pages/ManageUsers.aspx" title="Manage Users"  description=""/>
-
   </siteMapNode>
 </siteMap>

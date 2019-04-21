@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.Security;
+using System.Collections;
 using System.Data.SqlClient;
 using System.Configuration;
 
@@ -20,6 +22,9 @@ public partial class SignUp : System.Web.UI.Page
         string firstName = ((TextBox)CreateUserWizard1.CreateUserStep.ContentTemplateContainer.FindControl("TextBoxFirstName")).Text;
         string surname = ((TextBox)CreateUserWizard1.CreateUserStep.ContentTemplateContainer.FindControl("TextBoxSurname")).Text;
 
+        //Give the new user the default role
+        Roles.AddUserToRole(viaId, "unregisteredStudent");
+
         //Get default connection string/path to our database from the webconfig file
         string dbString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
 
@@ -27,7 +32,7 @@ public partial class SignUp : System.Web.UI.Page
         SqlConnection con = new SqlConnection(dbString);
 
 
-        string sqlCommandString = "INSERT INTO users (viaId, firstName, surname) VALUES (@viaId, @firstName, @surname)";
+        string sqlCommandString = "INSERT INTO users (viaId, firstName, surname, role) VALUES (@viaId, @firstName, @surname, @role)";
 
         //Open the database connection
         con.Open();
@@ -38,7 +43,7 @@ public partial class SignUp : System.Web.UI.Page
         sqlCmd.Parameters.AddWithValue("@viaId", Int32.Parse(viaId));
         sqlCmd.Parameters.AddWithValue("@firstName", firstName);
         sqlCmd.Parameters.AddWithValue("@surname", surname);
-
+        sqlCmd.Parameters.AddWithValue("@role", "unregisteredStudent");
         //Execute the sqlCmd
         sqlCmd.ExecuteNonQuery();
 
