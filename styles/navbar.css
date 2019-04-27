@@ -80,6 +80,24 @@ text-decoration:none;
   margin-left: 0;
 }
 
+#schedule {
+    padding-top: 10px;
+    padding-left: 15px;
+}
+
+#scheduleItem {
+    margin-right: 20px;
+    background-color: white;
+    border: thick;
+    padding-left: 5px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+.scheduleWeekday {
+    font-weight: bold;
+}
+
 /*
 #wrapper {
   position: fixed;
