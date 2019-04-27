@@ -1,7 +1,12 @@
-﻿.bookingContainer {
+﻿#roomBooking {
+    padding-top: 10px;
+    padding-left: 15px;
+}
+
+.bookingContainer {
     background-color:white;
     padding:30px;
-    margin:4%;
+    margin:2%;
     height:400px;
 }
 
