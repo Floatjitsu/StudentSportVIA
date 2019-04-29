@@ -2,8 +2,10 @@
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
   <siteMapNode url="" title="" description="">
     <siteMapNode url="~/Pages/Home.aspx" title="Home"  description=""/>
-    <siteMapNode url="#" title="Schedule"  description=""/>
+    <siteMapNode url="~/Pages/Schedule.aspx" title="Schedule"  description=""/>
     <siteMapNode url="~/Pages/RoomBooking.aspx" title="Room Booking"  description="Book a room"/>
     <siteMapNode url="~/Pages/Sports.aspx" title="Sports"  description=""/>
+    <siteMapNode url="~/Pages/WhoPaid.aspx" title="WhoPaid List" description="all the user who paid and are correctly subscribed"/>
+
   </siteMapNode>
 </siteMap>

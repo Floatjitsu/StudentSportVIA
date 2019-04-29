@@ -6,7 +6,7 @@
 
 <%-- Sport Title--%>
 <asp:Content ID="ContentTitle" ContentPlaceHolderID="ContentPlaceHolderTitle" runat="server">
-    ABS
+    <asp:Label ID="sportName" runat="server" Text="ABS" />
 </asp:Content>
 
 <%-- Name of the teacher--%>
@@ -32,10 +32,8 @@
     ContentPlaceHolder2 here!
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
-   
-    <br />
-    <br />
-    ContentPlaceHolder3 here!
+   <!-- Sport Schedule here -->
+
 </asp:Content>
 
 <asp:Content ID="Content7" ContentPlaceHolderID="Picture1ContentPlaceHolder" runat="server">

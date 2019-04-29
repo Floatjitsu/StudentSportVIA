@@ -4,7 +4,7 @@
 
 <%-- Sport Title--%>
 <asp:Content ID="ContentTitle" ContentPlaceHolderID="ContentPlaceHolderTitle" runat="server">
-    Tabata
+    <asp:Label ID="sportName" runat="server" Text="Tabata" />
 </asp:Content>
 
 <%-- Name of the teacher--%>
