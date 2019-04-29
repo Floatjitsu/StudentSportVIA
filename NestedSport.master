@@ -97,7 +97,7 @@
                 Schedule
             </div>
             <div id="scheduleContent">
-                Here the schedule...
+                
                  <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
         
                 
