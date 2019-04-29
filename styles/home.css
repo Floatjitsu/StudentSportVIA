@@ -1,5 +1,6 @@
 ﻿.container {
     background-color:#E5E5E5;
+    margin-bottom:10%;
 }
 
 * {
@@ -18,7 +19,9 @@
 }
 
 h1 {
-    margin-left:5%
+    margin-left: 5%;
+    margin-top: 20px;
+    margin-bottom: 25px;
 }
 
 .row {
@@ -26,25 +29,26 @@ h1 {
     margin-right:5%;
     width:90%;
     margin-bottom:15px;
+    display: inherit;
 }
 
 #news {
-    
+    padding:15px;
     height:250px;
     background-color:white;
 }
 
 #headNews {
-    height:30px;
     background-image:linear-gradient(to right, #3E4891,#833D3D);
-        padding-top:6px;
-    padding-bottom:6px;
-    padding-left:4px;
+    padding-left:15px;
     margin-bottom:0;
+    color:white;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .leftPic {
-    background-color:red;
+    background-color:white;
     height:250px;
     display:inline-block;
     width:70%;  
@@ -52,26 +56,40 @@ h1 {
 }
 
 .rightPic {
-    background-color:green;
-    height:250px;
+    background-color:white;
+    height:100%;
     display:inline-block;
     float:left;
-    width:25%;
+    width:27%;
+}
+
+#contentRight {
+padding:15px;
+
 }
 
 .middlePic {
+    background-color:#E5E5E5;
     float:left;
     display:inline-block;
     height:250px;
-    width:5%;
+    width:3%;
 }
 
 #headPic {
     background-image:linear-gradient(to right, #3E4891,#833D3D);
-        padding-top:6px;
-    padding-bottom:6px;
-    padding-left:4px;
-    height:35px;
+    padding-left:15px;
+    color:white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#headPic2 {
+    background-image:linear-gradient(to right, #3E4891,#833D3D);
+    padding-left:15px;
+    color:white;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 #picRow {
@@ -94,7 +112,7 @@ h1 {
 
 .pi-title {
     text-align:center;
-    padding-top:100px;
+    padding-top:50px;
     
 }
 
@@ -115,7 +133,27 @@ h1 {
     background-color:#E5E5E5;
     margin-left:30%;
     margin-right:30%;
-    margin-top:5%;
+    margin-top:3%;
     padding:50px;
+}
+
+#payinfo {
+    background-image:linear-gradient(to right, #3E4891,#833D3D);
+    color:white;
+    display:inline;
+    padding-top: 89px;
+    padding-bottom: 92px;
+    padding-left: 8%;
+    padding-right: 8%;
+    margin-left: 38px;
+    margin-right: 38px;
+    font-weight:bold;
+}
+
+#payinfo :hover {
+    
+    color:blue;
+  
+    font-weight:bolder;
 }
 

@@ -9,12 +9,13 @@
         <h1>Home</h1>
         <div class="row">
             
-                <img src="../images/spongebob.jpg" class="imgRow" />
+                <img src="../images/sportimg1.jpg" class="imgRow" />
             
                 <a href="PaymentInfo.aspx">
-                    <img src="../images/spongebob.jpg"  class="imgRow" id="middleImg"/>
+                    <div id="payinfo"> Payment informations</div>
+                    <%-- <img src="../images/spongebob.jpg"  class="imgRow" id="middleImg"/> --%>
                 </a>           
-                <img src="../images/spongebob.jpg"  class="imgRow" />
+                <img src="../images/sportimg2.png"  class="imgRow" />
           
         </div>
         <div class="row" id="headNews">
@@ -26,15 +27,23 @@
         <div class="row" id="picRow">
             <div class="leftPic">
                 <div id="headPic">
-                    <span>Pictures</span>
+                    <span>More informations</span>
                 </div>
-                <img src="../images/spongebob.jpg" width="75%" height="215px"/>
+                <%-- <img src="../images/spongebob.jpg" width="75%" height="215px"/> --%>
             </div>
             <div class="middlePic">
                 &nbsp;
             </div>
             <div class="rightPic">
-                DO STUFF HERE
+                <div id="headPic2">
+                    <span>Price informations</span>
+                </div>
+                <div id="contentRight">
+                    </br>
+                <b>400 dkk</b> until the 25/02/2019 </br></br>
+                <b>500 dkk</b> after the 26/02/2019
+
+                </div>
             </div>
         </div>
     </div>
