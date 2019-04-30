@@ -229,3 +229,14 @@ overflow:hidden;
 #sendMessage {
     margin-top: 10px;
 }
+
+/*Subscribe button*/
+.subscribeButton {
+     background-image: linear-gradient(to right, #3E4891,#833D3D);
+    color:white;
+    border:0px;
+    border-radius:3px;
+    height: 40px;
+    width: 100%;
+    cursor:pointer;
+}

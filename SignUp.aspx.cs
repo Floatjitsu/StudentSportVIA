@@ -41,7 +41,7 @@ public partial class SignUp : System.Web.UI.Page
 
         //Fill in the parameters in our prepared SQL statement      
         sqlCmd.Parameters.AddWithValue("@viaId", Int32.Parse(viaId));
-        sqlCmd.Parameters.AddWithValue("@firstName", firstName);
+        sqlCmd.Parameters.AddWithValue("@firstName", firstName);http://localhost:59420/StudentSportVIA/registeredStudent.sitemap
         sqlCmd.Parameters.AddWithValue("@surname", surname);
         sqlCmd.Parameters.AddWithValue("@role", "unregisteredStudent");
         //Execute the sqlCmd

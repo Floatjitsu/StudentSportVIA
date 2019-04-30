@@ -8,9 +8,16 @@
     Football
 </asp:Content>
 
+<%-- Subscribe Button--%>
+
+<asp:Content ID="Content10" ContentPlaceHolderID="subscribeButtonPlaceHolder" runat="server">
+    <asp:Button ID="SubscribeButton" runat="server" Text="+ Subscribe to this sport" CssClass="subscribeButton" OnClick="subscribeSport" />
+ </asp:Content>
+
+
 <%-- Name of the teacher--%>
 <asp:Content ID="Content9" ContentPlaceHolderID="TeacherNameContentPlaceHolder" runat="server">
-   Travis Shelton
+    Travis Shelton
 </asp:Content>
 
 <%-- Image of the teacher--%>
@@ -69,7 +76,7 @@
 
 <asp:Content ID="chat" ContentPlaceHolderID="ChatPlaceHolder" runat="server">
     <!-- DataSource for the Chat. -->
-
+    <div id="ChatDiv">
     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
          SelectCommand="SELECT Id as id,username as username, message as message FROM [chatmessage] WHERE sportname='Football' ORDER BY id" />
         
@@ -82,10 +89,12 @@
             </div>
         </ItemTemplate>
     </asp:DataList>
+        </div>
 </asp:Content>
 
 <asp:Content ID="sendMessageContent" ContentPlaceHolderID="SendMessagePlaceHolder" runat="server">
     <asp:TextBox ID="currentMessage" runat="server"/>
     <asp:Button ID="sendMessage" runat="server" Text="Send" OnClick="sendMessage_Click"/> 
+
 </asp:Content>
 

@@ -35,7 +35,10 @@
 
         <!--Using a parent div to center the subscribe div-->
             <div id="subscribeSport">
-            Subscribe to this sport +
+                  <asp:ContentPlaceHolder ID="subscribeButtonPlaceHolder" runat="server">
+        
+             </asp:ContentPlaceHolder>
+            
                   </div>
                 </div>
         <div class="horizontalDivider">
