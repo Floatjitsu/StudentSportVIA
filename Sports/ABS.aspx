@@ -67,3 +67,25 @@
     <br />
     ContentPlaceHolder4 here!
 </asp:Content>
+
+<asp:Content ID="chat" ContentPlaceHolderID="ChatPlaceHolder" runat="server">
+    <!-- DataSource for the Chat. -->
+
+    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+         SelectCommand="SELECT Id as id,username as username, message as message FROM [chatmessage] WHERE sportname='ABS' ORDER BY id" />
+        
+    <asp:DataList ID="DataListChat" runat="server" RepeatColumns="0" DataSourceID="SqlDataSource2" RepeatDirection="Vertical">
+        <ItemTemplate>
+            <div id="chatItem">
+                <asp:Label runat="server" CssClass="chatItem" ID="username" Text='<%# Eval("username") %>'/>
+                <asp:Label ID="Label1" runat="server" CssClass="chatItem" Text=" : "/>
+                <asp:Label runat="server" CssClass="chatItem" ID="message" Text='<%# Eval("message") %>'/>
+            </div>
+        </ItemTemplate>
+    </asp:DataList>
+</asp:Content>
+
+<asp:Content ID="sendMessageContent" ContentPlaceHolderID="SendMessagePlaceHolder" runat="server">
+    <asp:TextBox ID="currentMessage" runat="server"/>
+    <asp:Button ID="sendMessage" runat="server" Text="Send" OnClick="sendMessage_Click"/> 
+</asp:Content>

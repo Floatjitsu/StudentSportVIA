@@ -141,12 +141,12 @@
             <div id="chatTitle">
                 Chat
             </div>
-            <div id="chatContent">
-                Here the chat...
-                <br />
-                <br />
-                We can implement the chat here, without any kind of ContentPlaceHolder
-                
+            <div id="chatContent" style="overflow:auto">
+                <asp:ContentPlaceHolder ID="ChatPlaceHolder" runat="server" />                
+            </div>
+
+            <div id="sendMessage">
+                <asp:ContentPlaceHolder ID="SendMessagePlaceholder" runat="server" />
             </div>
 
         </div>
