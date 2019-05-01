@@ -10,6 +10,7 @@ using System.Drawing;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Web.Security;
+using System.Web.UI.HtmlControls;
 
 
 public partial class Sports_Football : System.Web.UI.Page
@@ -41,22 +42,29 @@ public partial class Sports_Football : System.Web.UI.Page
         }
         return check;
     }
-        
 
     protected void Page_Load(object sender, EventArgs e) {
         DataList1.DataBind();
-
-        //Hide the subscribe button if the user is SUBSCRIBED
+        //user subscribed
         if (checkIfSubscribed())
         {
+
+            //Hide the subscribe button if the user is SUBSCRIBED
             SubscribeButton.Visible = false;
-           
+            UnsubscribeButton.Visible = true;
+            ChatDiv.Visible = true;
+            SendChatDiv.Visible = true;
+
 
         }
-            //or show if the user is not subscribed
+            //user not subscribed
         else
         {
             SubscribeButton.Visible = true;
+            UnsubscribeButton.Visible = false;
+            ChatDiv.Visible = false;
+            SendChatDiv.Visible = false;
+            
         }
 
 
@@ -74,6 +82,7 @@ public partial class Sports_Football : System.Web.UI.Page
         }
     }
 
+    //manage the chat
     protected void sendMessage_Click(object sender, EventArgs e) {
 
         String message = currentMessage.Text;
@@ -130,6 +139,35 @@ public partial class Sports_Football : System.Web.UI.Page
 
         //Inserting the values
         insertCommand.Parameters.AddWithValue("@sportName", sportName);
+        insertCommand.Parameters.AddWithValue("@viaID", viaID);
+        insertCommand.ExecuteNonQuery();
+        connection.Close();
+
+        //Refresh the page after the subscription is done (redirect to itself)
+        //This is necessary for the unsubscribe button to appear (the page load method is recalled)
+        Response.Redirect(Request.RawUrl);
+    }
+
+
+    protected void unsubscribeSport(object sender, EventArgs e)
+    {
+        //When the user press the button, his viaID is deleted in the 'sportSubscription' table
+
+        //Gets the default connection string/path to our database from the web.config file
+        string dbstring = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+
+        //Set up Connection
+        SqlConnection connection = new SqlConnection(dbstring);
+        connection.Open();
+
+        //Build the select String and the SqlCommand
+        string insertString = "DELETE FROM sportSubscription WHERE viaID=@viaID";
+        SqlCommand insertCommand = new SqlCommand(insertString, connection);
+
+        //Retrieving the UserName (viaID) of the current user
+        int viaID = Int32.Parse(Membership.GetUser().UserName);
+
+        //Inserting the values
         insertCommand.Parameters.AddWithValue("@viaID", viaID);
         insertCommand.ExecuteNonQuery();
         connection.Close();

@@ -140,7 +140,7 @@
         </div>
 
         <!-- Here start the Wrapper 4-->
-        <div id="sportWrapper4">
+        <div runat="server" id="sportWrapper4">
             <div id="chatTitle">
                 Chat
             </div>
