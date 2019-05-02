@@ -22,6 +22,9 @@ public partial class Pages_ManageUsers : System.Web.UI.Page
     }
 
     protected void ButtonRegisterUser_Click(object sender, EventArgs e) {
+       
+        Roles.RemoveUserFromRoles(TextBoxID.Text, Roles.GetRolesForUser(TextBoxID.Text));
+        
         //Update User Role in ASP.NET Standard Table
         Roles.AddUserToRole(TextBoxID.Text, RoleList.SelectedValue);
 

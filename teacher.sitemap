@@ -6,6 +6,7 @@
     <siteMapNode url="~/Pages/RoomBooking.aspx" title="Room Booking"  description="Book a room"/>
     <siteMapNode url="~/Pages/Sports.aspx" title="Sports"  description=""/>
     <siteMapNode url="~/Pages/WhoPaid.aspx" title="WhoPaid List" description="all the user who paid and are correctly subscribed"/>
+    <siteMapNode url="~/Pages/ManageSports.aspx" title="Manage Sports" description=""/>
 
   </siteMapNode>
 </siteMap>
