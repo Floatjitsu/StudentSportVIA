@@ -21,8 +21,16 @@
         <div class="row" id="headNews">
             <span>Latest news</span>
         </div>
-        <div class="row" id="news">
-            DO STUFF WITH DATABASE HERE
+       <div class="row" id="news" style="overflow:auto">
+    <asp:DataList ID="DataListNews" runat="server" RepeatColumns="0" RepeatDirection="Vertical">
+        <ItemTemplate>
+            <div id="chatItem">
+                <asp:Label runat="server" CssClass="chatItem" ID="sportname" Text='<%# Eval("sportname") %>'/>
+                <asp:Label ID="Label1" runat="server" CssClass="chatItem" Text=" : "/>
+                <asp:Label runat="server" CssClass="chatItem" ID="news" Text='<%# Eval("news") %>'/>
+            </div>
+        </ItemTemplate>
+    </asp:DataList>
         </div>
         <div class="row" id="picRow">
             <div class="leftPic">
