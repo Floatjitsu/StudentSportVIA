@@ -9,12 +9,6 @@
 
     </asp:ContentPlaceHolder>
 </asp:Content>
-
-
-
-
-    
-
     
 <%-- The master page will work inside the main content place holder of the main master page --%> 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
@@ -80,7 +74,6 @@
                 Latest news
             </div>
             <div id="latestNewsContent">
-                News content here
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
         
                 

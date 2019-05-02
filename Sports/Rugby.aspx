@@ -33,11 +33,24 @@
         Two teams try to score points by carrying an oval ball across a
         particular line or kicking it over and between an H-shaped set of posts.</p>
 </asp:Content>
+
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-    <br />
-    <br />
-    ContentPlaceHolder2 here!
+    <!-- Here the latest news from the sport Teacher-->
+    <!-- Creating the connection to the database!-->
+    <asp:SqlDataSource ID="LatestNewsSqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+        SelectCommand="SELECT news as news FROM [news] WHERE sportname='Rugby'">
+    </asp:SqlDataSource>
+    <!--Showing data from the database -->
+    <asp:DataList ID="LatestNewsDataList" runat="server" RepeatColumns="0" DataSourceID="LatestNewsSqlDataSource" RepeatDirection="Vertical">
+     <ItemTemplate>
+            <div id="LatestNewsDbsDiv">
+                <asp:Label ID="Label1" runat="server" Text=" - "/>
+                <asp:Label runat="server" ID="username" Text='<%# Eval("news") %>'/>
+            </div>
+        </ItemTemplate>
+    </asp:DataList>
 </asp:Content>
+
 <asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
     <asp:Label ID="sportName" runat="server" Text="Rugby" Visible="false" />
    <!-- Sport Schedule here -->
