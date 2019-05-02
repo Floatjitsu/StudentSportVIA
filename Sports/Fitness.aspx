@@ -1,11 +1,20 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/NestedSport.master" AutoEventWireup="true" CodeFile="Fitness.aspx.cs" Inherits="Sports_Fitness" %>
 
+<%-- Virtual path for using property of the NestedSport master page--%>
+<%@ MasterType VirtualPath="~/NestedSport.master" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="SportASPXHead" runat="server">
 </asp:Content>
 
 <%-- Sport Title--%>
 <asp:Content ID="ContentTitle" ContentPlaceHolderID="ContentPlaceHolderTitle" runat="server">
     Fitness
+</asp:Content>
+
+<%-- Subscribe Button--%>
+<asp:Content ID="Content10" ContentPlaceHolderID="subscribeButtonPlaceHolder" runat="server">
+    <asp:Button ID="SubscribeButton" runat="server" Text="+ Subscribe to this sport" CssClass="subscribeButton" OnClick="subscribeSport" />
+    <asp:Button ID="UnsubscribeButton" runat="server" Text="- Unsubscribe to this sport" CssClass="subscribeButton" OnClick="unsubscribeSport" />
 </asp:Content>
 
 <%-- Name of the teacher--%>

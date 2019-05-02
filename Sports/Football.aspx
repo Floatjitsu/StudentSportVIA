@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/NestedSport.master" AutoEventWireup="true" CodeFile="Football.aspx.cs" Inherits="Sports_Football" %>
 
+<%-- Virtual path for using property of the NestedSport master page--%>
+<%@ MasterType VirtualPath="~/NestedSport.master" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="SportASPXHead" runat="server">
 </asp:Content>
@@ -10,12 +12,10 @@
 </asp:Content>
 
 <%-- Subscribe Button--%>
-
 <asp:Content ID="Content10" ContentPlaceHolderID="subscribeButtonPlaceHolder" runat="server">
     <asp:Button ID="SubscribeButton" runat="server" Text="+ Subscribe to this sport" CssClass="subscribeButton" OnClick="subscribeSport" />
     <asp:Button ID="UnsubscribeButton" runat="server" Text="- Unsubscribe to this sport" CssClass="subscribeButton" OnClick="unsubscribeSport" />
 </asp:Content>
-
 
 <%-- Name of the teacher--%>
 <asp:Content ID="Content9" ContentPlaceHolderID="TeacherNameContentPlaceHolder" runat="server">
@@ -78,7 +78,7 @@
 
 <asp:Content ID="chat" ContentPlaceHolderID="ChatPlaceHolder" runat="server">
     <!-- DataSource for the Chat. -->
-    <div runat="server" id="ChatDiv">
+    <div id="ChatDiv">
     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
          SelectCommand="SELECT Id as id,username as username, message as message FROM [chatmessage] WHERE sportname='Football' ORDER BY id" />
         
@@ -95,7 +95,7 @@
 </asp:Content>
 
 <asp:Content ID="sendMessageContent" ContentPlaceHolderID="SendMessagePlaceHolder" runat="server">
-    <div runat="server" id="SendChatDiv">
+    <div id="SendChatDiv">
     <asp:TextBox ID="currentMessage" runat="server"/>
     <asp:Button ID="sendMessage" runat="server" Text="Send" OnClick="sendMessage_Click"/> 
         </div>

@@ -21,7 +21,7 @@ public partial class Sports_Football : System.Web.UI.Page
 
         //Retrieving the UserName (viaID) of the current user
         int viaID = Int32.Parse(Membership.GetUser().UserName);
-
+       
         //Gets the default connection string/path to our database from the web.config file
         string dbstring = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
 
@@ -30,9 +30,11 @@ public partial class Sports_Football : System.Web.UI.Page
         connection.Open();
 
         //Build the select String and the SqlCommand
-        string insertString = "SELECT viaID FROM sportSubscription WHERE viaID=@viaID";
+        string insertString = "SELECT viaID FROM sportSubscription WHERE viaID=@viaID AND sportName=@sportname";
         SqlCommand cmd = new SqlCommand(insertString, connection);
         cmd.Parameters.AddWithValue("@viaID", viaID);
+        string sportname = "Football";
+        cmd.Parameters.AddWithValue("@sportname", sportname);
         SqlDataReader reader = cmd.ExecuteReader();
 
        //if this condition is true, the user is already registered to the current sport
@@ -52,9 +54,7 @@ public partial class Sports_Football : System.Web.UI.Page
             //Hide the subscribe button if the user is SUBSCRIBED
             SubscribeButton.Visible = false;
             UnsubscribeButton.Visible = true;
-            ChatDiv.Visible = true;
-            SendChatDiv.Visible = true;
-
+            Master.sportWrapper4Visible.Visible=true;
 
         }
             //user not subscribed
@@ -62,12 +62,8 @@ public partial class Sports_Football : System.Web.UI.Page
         {
             SubscribeButton.Visible = true;
             UnsubscribeButton.Visible = false;
-            ChatDiv.Visible = false;
-            SendChatDiv.Visible = false;
-            
-        }
-
-
+            Master.sportWrapper4Visible.Visible = false;
+                    }
     }
 
     protected void DataList1_ItemDataBound(object sender, DataListItemEventArgs e) {
@@ -161,14 +157,16 @@ public partial class Sports_Football : System.Web.UI.Page
         connection.Open();
 
         //Build the select String and the SqlCommand
-        string insertString = "DELETE FROM sportSubscription WHERE viaID=@viaID";
+        string insertString = "DELETE FROM sportSubscription WHERE viaID=@viaID AND sportName=@sportname";
         SqlCommand insertCommand = new SqlCommand(insertString, connection);
 
         //Retrieving the UserName (viaID) of the current user
         int viaID = Int32.Parse(Membership.GetUser().UserName);
+        string sportname = "Football";
 
         //Inserting the values
         insertCommand.Parameters.AddWithValue("@viaID", viaID);
+        insertCommand.Parameters.AddWithValue("@sportname", sportname);
         insertCommand.ExecuteNonQuery();
         connection.Close();
 
