@@ -22,15 +22,83 @@
             <span>Latest news</span>
         </div>
        <div class="row" id="news" style="overflow:auto">
-    <asp:DataList ID="DataListNews" runat="server" RepeatColumns="0" RepeatDirection="Vertical">
-        <ItemTemplate>
-            <div id="chatItem">
-                <asp:Label runat="server" CssClass="chatItem" ID="sportname" Text='<%# Eval("sportname") %>'/>
-                <asp:Label ID="Label1" runat="server" CssClass="chatItem" Text=" : "/>
-                <asp:Label runat="server" CssClass="chatItem" ID="news" Text='<%# Eval("news") %>'/>
-            </div>
-        </ItemTemplate>
-    </asp:DataList>
+           <%-- Split view for registered student, teacher, admin and unregistered --%>
+            <asp:LoginView ID="NewsLoginView" runat="server">
+                <AnonymousTemplate>
+                    <div class="NewsCenter">
+                        <div class="childNews">
+                    <p>
+                        You need to pay and be subscribed correctly to be able to see the news.
+                        <br />
+                        Here you will be able to see all the messages sent from the teacher of the sports you are subscribed to.
+                    </p>
+                            </div>
+                        </div>
+                </AnonymousTemplate>
+                <RoleGroups>
+                    <asp:RoleGroup Roles="unregisteredStudent">
+                        <ContentTemplate>
+                         <div class="NewsCenter">
+                        <div class="childNews">
+                    <p><br /><br /><br />
+                       
+                        You need to <b>pay and be subscribed<b> correctly to be able to see the news.
+                        <br />
+                        Here you will be able to see all the messages sent from the teacher of the sports you are subscribed to.
+                    </p>
+                            </div>
+                        </div>
+                        </ContentTemplate>
+                    </asp:RoleGroup>
+
+                    <asp:RoleGroup Roles="registeredStudent">
+                        <ContentTemplate>
+                            <%--Retrieve data from the database for showing the latest news from the sports the user is subscribed to--%>
+                            <asp:DataList ID="DataListNews" runat="server" RepeatColumns="0" RepeatDirection="Vertical">
+                                <ItemTemplate>
+                                    <div id="chatItem">
+                                        <asp:Label runat="server" CssClass="chatItem" ID="sportname" Text='<%# Eval("sportname") %>' />
+                                        <asp:Label ID="Label1" runat="server" CssClass="chatItem" Text=" : " />
+                                        <asp:Label runat="server" CssClass="chatItem" ID="news" Text='<%# Eval("news") %>' />
+                                    </div>
+                                </ItemTemplate>
+                            </asp:DataList>
+                        </ContentTemplate>
+
+                    </asp:RoleGroup>
+                    <asp:RoleGroup Roles="teacher">
+                        <ContentTemplate>
+                            <%--Retrieve data from the database for showing the latest news from the sports the user is subscribed to--%>
+                            <asp:DataList ID="DataListNews" runat="server" RepeatColumns="0" RepeatDirection="Vertical">
+                                <ItemTemplate>
+                                    <div id="chatItem">
+                                        <asp:Label runat="server" CssClass="chatItem" ID="sportname" Text='<%# Eval("sportname") %>' />
+                                        <asp:Label ID="Label1" runat="server" CssClass="chatItem" Text=" : " />
+                                        <asp:Label runat="server" CssClass="chatItem" ID="news" Text='<%# Eval("news") %>' />
+                                    </div>
+                                </ItemTemplate>
+                            </asp:DataList>
+                        </ContentTemplate>
+                    </asp:RoleGroup>
+                    <asp:RoleGroup Roles="admin">
+                        <ContentTemplate>
+                            <%--Retrieve data from the database for showing the latest news from the sports the user is subscribed to--%>
+                            <asp:DataList ID="DataListNews" runat="server" RepeatColumns="0" RepeatDirection="Vertical">
+                                <ItemTemplate>
+                                    <div id="chatItem">
+                                        <asp:Label runat="server" CssClass="chatItem" ID="sportname" Text='<%# Eval("sportname") %>' />
+                                        <asp:Label ID="Label1" runat="server" CssClass="chatItem" Text=" : " />
+                                        <asp:Label runat="server" CssClass="chatItem" ID="news" Text='<%# Eval("news") %>' />
+                                    </div>
+                                </ItemTemplate>
+                            </asp:DataList>
+                        </ContentTemplate>
+                    </asp:RoleGroup>
+                </RoleGroups>
+            </asp:LoginView>
+   
+
+
         </div>
         <div class="row" id="picRow">
             <div class="leftPic">

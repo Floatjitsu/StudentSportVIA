@@ -157,3 +157,12 @@ padding:15px;
     font-weight:bolder;
 }
 
+
+.NewsCenter {
+    width:100%;
+    text-align:center;
+}
+
+.childNews {
+    display: inline-block
+}

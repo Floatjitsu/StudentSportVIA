@@ -27,8 +27,14 @@ using System.Web.UI.WebControls;
             SqlDataAdapter adapter = new SqlDataAdapter(selectCommand);
             adapter.Fill(dataTable);
 
-            DataListNews.DataSource = dataTable;
-            DataListNews.DataBind();
+            DataList datalist = (DataList)NewsLoginView.FindControl("DataListNews");
+            if (datalist != null)
+            {
+                datalist.DataSource = dataTable;
+                datalist.DataBind();
+            }
+            //DataListNews.DataSource = dataTable;
+            //DataListNews.DataBind();
 
             connection.Close();
         }
