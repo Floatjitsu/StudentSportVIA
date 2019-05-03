@@ -16,7 +16,6 @@
     <asp:Button ID="SubscribeButton" runat="server" Text="+ Subscribe to this sport" CssClass="subscribeButton" OnClick="subscribeSport" />
     <asp:Button ID="UnsubscribeButton" runat="server" Text="- Unsubscribe to this sport" CssClass="subscribeButton" OnClick="unsubscribeSport" />
      <asp:Button ID="JoinTheSystemButton" runat="server" Text="$ Pay to be able to subscribe $" CssClass="payButton"/>
-   
 </asp:Content>
 
 <%-- Name of the teacher--%>

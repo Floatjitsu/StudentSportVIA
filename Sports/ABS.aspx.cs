@@ -44,25 +44,37 @@ public partial class Sports_ABS : System.Web.UI.Page {
         return check;
     }
 
-    protected void Page_Load(object sender, EventArgs e) {
+    protected void Page_Load(object sender, EventArgs e)
+    {
         DataList1.DataBind();
-         //user subscribed
-        if (checkIfSubscribed())
+        //user subscribed
+
+        if (Roles.GetRolesForUser().Contains("unregisteredStudent"))
+        {
+            SubscribeButton.Visible = false;
+            UnsubscribeButton.Visible = false;
+            JoinTheSystemButton.Visible = true;
+            Master.sportWrapper4Visible.Visible = false;
+        }
+
+        else if (checkIfSubscribed())
         {
 
             //Hide the subscribe button if the user is SUBSCRIBED
             SubscribeButton.Visible = false;
             UnsubscribeButton.Visible = true;
-            Master.sportWrapper4Visible.Visible=true;
+            Master.sportWrapper4Visible.Visible = true;
+            JoinTheSystemButton.Visible = false;
 
         }
-            //user not subscribed
+        //user not subscribed
         else
         {
             SubscribeButton.Visible = true;
             UnsubscribeButton.Visible = false;
             Master.sportWrapper4Visible.Visible = false;
-                    }
+            JoinTheSystemButton.Visible = false;
+        }
     }
 
     protected void DataList1_ItemDataBound(object sender, DataListItemEventArgs e) {
