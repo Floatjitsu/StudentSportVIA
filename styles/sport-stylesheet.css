@@ -232,11 +232,20 @@ overflow:hidden;
 
 /*Subscribe button*/
 .subscribeButton {
-     background-image: linear-gradient(to right, #3E4891,#833D3D);
+    background-image: linear-gradient(to right, #3E4891,#833D3D);
     color:white;
     border:0px;
     border-radius:3px;
     height: 40px;
     width: 100%;
     cursor:pointer;
+}
+
+.payButton {
+      background-image: linear-gradient(to right, #3E4891,#833D3D);
+    color:white;
+    border:0px;
+    border-radius:3px;
+    height: 40px;
+    width: 100%;
 }

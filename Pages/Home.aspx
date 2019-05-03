@@ -96,9 +96,7 @@
                     </asp:RoleGroup>
                 </RoleGroups>
             </asp:LoginView>
-   
-
-
+  
         </div>
         <div class="row" id="picRow">
             <div class="leftPic">
