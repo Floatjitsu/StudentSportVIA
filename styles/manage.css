@@ -1,0 +1,34 @@
+﻿body {
+}
+
+#ManageContainer {
+    background-color:white;
+    margin:5%;
+
+    padding-top:30px;
+    padding-left:30px;
+    padding-bottom:40px;
+}
+
+#UserListDiv {
+    padding-top:1%;
+    padding-left:5%;
+    padding-right:7%;
+}
+
+#SetRoleDiv {
+    padding-top:17%;
+    padding-left:4%;
+    padding-right:2%;
+    position: absolute;
+}
+
+#AllUsersDiv {
+    padding-top:2%;
+}
+
+#DeleteUserDiv {
+    padding-left: 38%;
+    padding-bottom:30px;
+    margin-top: 2%;
+}

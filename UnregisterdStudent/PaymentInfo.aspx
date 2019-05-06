@@ -15,9 +15,13 @@
             </div>
         </div>
         <div class="pi-text">      
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a accumsan mauris. Curabitur lobortis nibh quis metus pretium consequat. Fusce porttitor sem in scelerisque rutrum. Aenean eu lectus eu nisl sodales semper. Pellentesque volutpat ipsum nec magna euismod, sed eleifend augue cursus. Vivamus vitae tincidunt metus. Donec tempus dignissim finibus. Pellentesque elementum posuere tincidunt. Donec semper libero eget mi aliquam dictum. Ut quis sem libero. Sed at leo non enim lacinia lobortis. In sollicitudin erat eu arcu sodales, id dictum orci posuere. Morbi sed molestie diam. Donec et tellus finibus, ultricies eros non, porttitor dolor.
+            If you want to join the amazing VIA gym, you have to pay first. To do so, you will need two things which you can do in any order :
             <br />
-            Mauris pulvinar dui vitae sapien tincidunt consequat. Ut dapibus ornare ullamcorper. Cras accumsan, tortor non vulputate dapibus, quam diam dapibus dui, et mollis libero sem eget lorem. Mauris et purus volutpat, interdum turpis ac, iaculis orci. Integer sodales lectus at blandit feugiat. Morbi malesuada nec diam eget consectetur. In hac habitasse platea dictumst.
+            You have to create an account on this website, using your VIA ID and choose a password. At this point you will be able to see the schedule and which sports are available on campus.
+            <br />
+            You have to pay the subscription fee, which can only be done at the gym. Just find a teacher, give them the money either with cash or MobilePay, as well as your VIA ID. 
+            <br />
+            After this you will be registered on the website as a subscribed member of the gym, and have access to every functionnality of the website as the chat and the possibility to book part of the gyms when they are free.
         </div>
 
     </div>

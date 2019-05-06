@@ -53,4 +53,26 @@ public partial class Pages_ManageUsers : System.Web.UI.Page
         //Refresh Page
         Response.Redirect("ManageUsers.aspx");
     }
+
+    protected void ButtonDeleteUser_Click(object sender, EventArgs e)
+    {
+        //Delete User in ASP.NET Standard Table
+        Membership.DeleteUser(UserSelected.Text);
+
+        string dbstring = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+
+        //Set up Connection
+        SqlConnection connection = new SqlConnection(dbstring);
+        connection.Open();
+
+
+        string selectString = "DELETE FROM users WHERE viaId=@viaId";
+        SqlCommand selectCommand = new SqlCommand(selectString, connection);
+
+        selectCommand.Parameters.AddWithValue("@viaId", Int32.Parse(UserSelected.Text));
+        selectCommand.ExecuteNonQuery();
+
+        //Refresh Page
+        Response.Redirect("ManageUsers.aspx");
+    }
 }

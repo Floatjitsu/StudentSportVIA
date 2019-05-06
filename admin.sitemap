@@ -7,7 +7,7 @@
     <siteMapNode url="~/UnregisterdStudent/Sports.aspx" title="Sports"  description=""/>
     <siteMapNode url="~/Admin/ManageUsers.aspx" title="Manage Users"  description=""/>
     <siteMapNode url="~/Teacher/WhoPaid.aspx" title="WhoPaid List" description="all the user who paid and are correctly subscribed"/>
-    <siteMapNode url="~/Teacher/ManageSports.aspx" title="Manage Sports" description=""/>
+    
  
 </siteMapNode>
 </siteMap>

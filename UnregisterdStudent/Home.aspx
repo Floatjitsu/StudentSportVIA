@@ -99,12 +99,22 @@
   
         </div>
         <div class="row" id="picRow">
-            <div class="leftPic">
+            <div class="leftPic" >
                 <div id="headPic">
                     <span>More informations</span>
                 </div>
-             
+             <div style="margin-top:20px; padding-left:15px;">
+                 The VIA gym is a friendly space where you'll be able to experience a lot of differents sports. 
+                <br />
+                Whether you're experienced or not doesn't matter, teachers are always here to help you.
+                <br />
+                This place is entirely run by students, from teachers to admin.
+                <br />
+                Each semester, competition and dance shows are organized so that you can show the skills you picked up to the world !
+                <br />
+                We hope to see you soon at the gym !
             </div>
+                </div>
             <div class="middlePic">
                 &nbsp;
             </div>

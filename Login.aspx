@@ -52,6 +52,10 @@
             </table>
         </LayoutTemplate>
     </asp:Login>
+    <h3>To log as an admin : 285256 // Luca12</h3>
+    <h3>To log as a teacher : 234234 // password</h3>
+    <h3>To log as a registered student : 0123456 // 0123456 </h3>
+    <h3>To log as an unregistered student : create a new account</h3>
    </div>
 </asp:Content>
 

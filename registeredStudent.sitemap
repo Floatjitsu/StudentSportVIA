@@ -4,6 +4,6 @@
     <siteMapNode url="~/UnregisterdStudent/Home.aspx" title="Home"  description=""/>
     <siteMapNode url="~/UnregisterdStudent/Schedule.aspx" title="Schedule"  description=""/>
     <siteMapNode url="~/RegisteredStudent/RoomBooking.aspx" title="Room Booking"  description="Book a room"/>
-    <siteMapNode url="~/UnregisterdStudent/Sports.aspx.aspx" title="Sports"  description=""/>
+    <siteMapNode url="~/UnregisterdStudent/Sports.aspx" title="Sports"  description=""/>
   </siteMapNode>
 </siteMap>
