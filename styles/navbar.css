@@ -88,7 +88,7 @@ text-decoration:none;
 #scheduleItem {
     margin-right: 20px;
     background-color: white;
-    border: thick;
+    left: 10px;
     padding-left: 5px;
     padding-right: 10px;
     padding-top: 10px;
@@ -116,4 +116,9 @@ text-decoration:none;
         min-width: 0;
         width: 100%;
     }
+}
+
+table td {
+    display: table-cell;
+    vertical-align: top;
 }

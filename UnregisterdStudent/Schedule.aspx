@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContentPlaceHolder" Runat="Server">
     <div id="schedule">
-        <h3 style="margin-bottom:10px">Sport Schedule</h3>
+        <h3 style="margin-bottom:10px">Schedule for the current week</h3>
         <asp:DataList ID="DataList1" runat="server" RepeatColumns="7" DataSourceID="SqlDataSource1" OnItemDataBound="DataList1_ItemDataBound" RepeatDirection="Horizontal">           
             <ItemTemplate>
                 <div id="scheduleItem">

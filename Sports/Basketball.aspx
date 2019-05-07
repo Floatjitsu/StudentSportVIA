@@ -58,7 +58,7 @@
 <asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
    <asp:Label ID="sportName" runat="server" Text="Basketball" Visible="false" />
    <!-- Sport Schedule here -->
-    <asp:DataList ID="DataList1" runat="server" RepeatColumns="2" DataSourceID="SqlDataSource1" OnItemDataBound="DataList1_ItemDataBound">
+    <asp:DataList ID="DataList1" runat="server" RepeatColumns="4" DataSourceID="SqlDataSource1" OnItemDataBound="DataList1_ItemDataBound">
         <ItemTemplate>
             <div id="scheduleItem">
                 <asp:Label ID="weekdayName" runat="server" CssClass="scheduleWeekday"/>
