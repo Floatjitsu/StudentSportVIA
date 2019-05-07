@@ -30,7 +30,38 @@ public partial class Pages_RoomBooking : System.Web.UI.Page
             } else if (rightHallRadioButton.Checked) {
                 location = "Right Hall";
             }
-            insertBooking(name, desc, date, startTime, endTime, location);
+            try {
+                checkBooking(date, startTime, endTime, location);
+                insertBooking(name, desc, date, startTime, endTime, location);
+            } catch (Exception ex) {
+                failureLabel.Visible = true;
+                failureLabel.Text = ex.Message;
+            }
+            
+        }
+    }
+
+    //Check if there is a booking already
+    protected void checkBooking(DateTime date, string startTime, string endTime, string location) {
+        string dbstring = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+        //Set up Connection
+        SqlConnection connection = new SqlConnection(dbstring);
+        connection.Open();
+
+        string checkStatement = "SELECT COUNT(*) FROM schedule WHERE weekday = @weekday AND time = @time AND place = @place";
+        SqlCommand checkCommand = new SqlCommand(checkStatement, connection);
+
+        //Append the endTime to the startTime
+        string time = startTime + "-" + endTime;
+
+        checkCommand.Parameters.AddWithValue("@weekday", date);
+        checkCommand.Parameters.AddWithValue("@time", time);
+        checkCommand.Parameters.AddWithValue("@place", location);
+
+        int bookingExists = (int)checkCommand.ExecuteScalar();
+
+        if (bookingExists != 0) {
+            throw new Exception("Room already booked at the given time and date!");
         }
     }
 
@@ -60,6 +91,7 @@ public partial class Pages_RoomBooking : System.Web.UI.Page
 
         connection.Close();
 
-        successLabel.Visible = true;
+        failureLabel.Visible = false;
+        successLabel.Visible = true;        
     }
 }

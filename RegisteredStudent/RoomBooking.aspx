@@ -69,12 +69,12 @@
                     <asp:ListItem Text="21:00" Value="hour6"></asp:ListItem>
                     <asp:ListItem Text="22:00" Value="hour7"></asp:ListItem>
                 </asp:DropDownList>
-                <br />
-                <h2> Schedule preview</h2>
+                <br />               
             </div>       
             <asp:Button ID="ConfirmButton" runat="server" Text="Confirm Booking" CssClass="confirmButton" OnClick="ConfirmButton_Click"/>
         </div>
-        <asp:Label ID="successLabel" runat="server" ForeColor="Green" Text="Booking Successful!" Visible="false" />     
+        <asp:Label ID="successLabel" runat="server" ForeColor="Green" Text="Booking Successful!" Visible="false" />    
+        <asp:Label ID="failureLabel" runat="server" ForeColor="Red" Visible="false" /> 
     </div>    
 </asp:Content>
 
