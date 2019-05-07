@@ -4,27 +4,32 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Web.Security;
-using System.Collections;
+using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Globalization;
+using System.Drawing;
+using System.Web.Security;
 
 public partial class Pages_ManageUsers : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!Page.IsPostBack) {
+        if (!Page.IsPostBack)
+        {
             List<string> roleList = new List<string>(Roles.GetAllRoles());
             roleList.Remove("admin");
             RoleList.DataSource = roleList;
-            RoleList.DataBind();            
+            RoleList.DataBind();
+            fillDropDownSportName();
         }
     }
 
-    protected void ButtonRegisterUser_Click(object sender, EventArgs e) {
-       
+    protected void ButtonRegisterUser_Click(object sender, EventArgs e)
+    {
+
         Roles.RemoveUserFromRoles(TextBoxID.Text, Roles.GetRolesForUser(TextBoxID.Text));
-        
+
         //Update User Role in ASP.NET Standard Table
         Roles.AddUserToRole(TextBoxID.Text, RoleList.SelectedValue);
 
@@ -66,7 +71,7 @@ public partial class Pages_ManageUsers : System.Web.UI.Page
         connection.Open();
 
 
-        string selectString = "DELETE FROM users WHERE viaId=@viaId";
+        string selectString = "INSERT INTO sports FROM users WHERE viaId=@viaId";
         SqlCommand selectCommand = new SqlCommand(selectString, connection);
 
         selectCommand.Parameters.AddWithValue("@viaId", Int32.Parse(UserSelected.Text));
@@ -74,5 +79,47 @@ public partial class Pages_ManageUsers : System.Web.UI.Page
 
         //Refresh Page
         Response.Redirect("ManageUsers.aspx");
+    }
+    protected void giveSportToTeacher_Click(object sender, EventArgs e)
+    {
+        string dbstring = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+
+        //Set up Connection
+        SqlConnection connection = new SqlConnection(dbstring);
+        connection.Open();
+
+        string selectString = "UPDATE sports SET teacherName=@teacherName WHERE sportName=@sportName";
+
+        SqlCommand selectCommand = new SqlCommand(selectString, connection);
+
+
+        selectCommand.Parameters.AddWithValue("@teacherName", teacherTextBox.Text);
+        selectCommand.Parameters.AddWithValue("@sportName", dropDownSportList.SelectedValue);
+        selectCommand.ExecuteNonQuery();
+
+    }
+
+    public void fillDropDownSportName()
+    {
+        DataTable dataTable = new DataTable();
+        //Gets the default connection string/path to our database from the web.config file
+        string dbstring = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+
+        //Set up Connection
+        SqlConnection connection = new SqlConnection(dbstring);
+        connection.Open();
+
+        //Build the select String and the SqlCommand
+        string selectString = "SELECT sportName FROM sports";
+        SqlCommand selectCommand = new SqlCommand(selectString, connection);
+        SqlDataAdapter adapter = new SqlDataAdapter(selectCommand);
+        adapter.Fill(dataTable);
+        dropDownSportList.DataSource = dataTable;
+        dropDownSportList.DataBind();
+        dropDownSportList.DataTextField = "sportName";
+        dropDownSportList.DataValueField = "sportName";
+        dropDownSportList.DataBind();
+
+        connection.Close();
     }
 }

@@ -1,16 +1,29 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeFile="ManageSports.aspx.cs" Inherits="Pages_ManageSports" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+     <link href="../styles/managesport.css" rel="stylesheet" type="text/css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContentPlaceHolder" Runat="Server">   
-    <asp:DropDownList  runat="server" ID="dropDownSportName"  AutoPostBack="true"/>
 
+    <div id="manageSportContainer">
+        <h2>Manage Sports</h2>
+        <br />
+    <div id="chooseSport">
+        <asp:Label ID="Label1" runat="server" Text="Choose the sport you want to manage : " />
+        <asp:DropDownList  runat="server" ID="dropDownSportName"  AutoPostBack="true"/>
+    </div>
     <div id="sendNewsDiv">
+        <br />
+        <asp:Label ID="sendNewsLabel" Text="Send informations to your students here : " runat="server" />
         <asp:TextBox ID="sendNewsTextBox" runat="server"/>
         <asp:Button ID="sendNews" runat="server" Text="Send" OnClick="sendNews_Click"/> 
+        <br />
     </div>
 
     <div id="teacherSchedule">
+        <br />
+        <h2>Your next lessons</h2>
+        <br />
         <asp:DataList ID="nextLessonsDataList" runat="server" RepeatColumns="2" OnItemDataBound="DataList2_ItemDataBound">
             <ItemTemplate>
                 <div id="scheduleItem">
@@ -26,6 +39,7 @@
                  </div>
             </ItemTemplate>
         </asp:DataList>
+        <br />
     </div>
 
     <div id="cancelCourse">
@@ -33,4 +47,6 @@
         <asp:DropDownList  runat="server" ID="dropDownLessonNumber"/>
         <asp:Button ID="cancelCourseButton" runat="server" Text="Cancel" OnClick="cancelCourse_Click"/>
     </div>
+
+        </div>
 </asp:Content>

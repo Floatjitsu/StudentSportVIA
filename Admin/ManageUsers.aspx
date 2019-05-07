@@ -23,25 +23,8 @@
                 <asp:Parameter DefaultValue="False" Name="paid" Type="Boolean" />
             </SelectParameters>
         </asp:SqlDataSource>
-    </div>
-
-       <div id="AllUsersDiv">
-        <h4> All Users </h4>
-        
-        <asp:GridView ID="UsersGrid" runat="server" AutoGenerateColumns="False" DataKeyNames="viaId" DataSourceID="SqlDataSource2" CellPadding="6" CssClass="mygrdContent" HeaderStyle-CssClass="header">
-            <Columns>
-                <asp:BoundField DataField="firstName" HeaderText="First Name" SortExpression="firstName" />
-                <asp:BoundField DataField="viaId" HeaderText="VIA ID" ReadOnly="True" SortExpression="viaId"/>
-                <asp:BoundField DataField="role" HeaderText="Role" ReadOnly="true" SortExpression="role" />
-            </Columns>
-        </asp:GridView>
-
-        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [firstName], [viaId], [role] FROM [users] ">
-        </asp:SqlDataSource>
-    </div>
-
-    <div id="SetRoleDiv">
-        <h5> Register User </h5>
+                <br />
+                <h5> Register User </h5>
 
         <table>
             <tr>
@@ -65,12 +48,37 @@
         </table>
     </div>
 
+       <div id="AllUsersDiv">
+        <h4> All Users </h4>
+        
+        <asp:GridView ID="UsersGrid" runat="server" AutoGenerateColumns="False" DataKeyNames="viaId" DataSourceID="SqlDataSource2" CellPadding="6" CssClass="mygrdContent" HeaderStyle-CssClass="header">
+            <Columns>
+                <asp:BoundField DataField="firstName" HeaderText="First Name" SortExpression="firstName" />
+                <asp:BoundField DataField="viaId" HeaderText="VIA ID" ReadOnly="True" SortExpression="viaId"/>
+                <asp:BoundField DataField="role" HeaderText="Role" ReadOnly="true" SortExpression="role" />
+            </Columns>
+        </asp:GridView>
+
+        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [firstName], [viaId], [role] FROM [users] ">
+        </asp:SqlDataSource>
+    </div>
+
+    <div id="SetRoleDiv">
+        <h5>Give a sport to a teacher</h5>
+        <asp:Label ID="Label2" runat="server" Text="Sport" />
+        <asp:DropDownList ID="dropDownSportList" runat="server" CssClass="dropdownlist" />
+            <br />
+        <asp:Label ID="Label3" Text="Teacher name " runat="server"/>
+        <asp:TextBox ID="teacherTextBox" runat="server" />
+        <asp:Button ID="giveSportToTeacher" runat="server" Text="Give sport" OnClick="giveSportToTeacher_Click" Cssclass="button"/>
+    </div>
+
     
     <div id="DeleteUserDiv">
         <h5>Delete a User</h5>
         <table>
             <tr>
-                <td><asp:Label ID="Label2" runat="server" Text="VIA ID" CssClass="label" /></td>
+                <td><asp:Label ID="Label4" runat="server" Text="VIA ID" CssClass="label" /></td>
                 <td><asp:TextBox ID="UserSelected" runat="server" CssClass="textbox"/></td>
 <%--                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ValidationGroup="Delete" runat="server" ErrorMessage="VIA ID is required" ControlToValidate="UserSelected" ForeColor="#800000" />--%>
             </tr>  
