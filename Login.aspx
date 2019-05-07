@@ -43,7 +43,7 @@
                             <tr>
                                 <td align="right" colspan="2">
                                     <asp:Button ID="LoginButton" runat="server" CommandName="Login" Text="Log In" ValidationGroup="Login1" CssClass="LoginButton"/>
-                                    <asp:Button ID="SignUpButton" runat="server" Text="Sign up" CssClass="SignUpButton" OnClick="SignUpButton_Click" />
+                                    <asp:Button ID="SignUpButton" runat="server" Text="Sign Up" CssClass="SignUpButton" OnClick="SignUpButton_Click" />
                                 </td>
                             </tr>
                         </table>

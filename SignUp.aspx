@@ -77,7 +77,7 @@
                     <table border="0" cellspacing="5" style="width:100%;height:100%;">
                         <tr align="right">
                             <td align="right" colspan="0">
-                                <asp:Button ID="StepNextButton" runat="server" CommandName="MoveNext" Text="SignUp" ValidationGroup="CreateUserWizard1" CssClass="LoginButton" />
+                                <asp:Button ID="StepNextButton" runat="server" CommandName="MoveNext" Text="Sign Up" ValidationGroup="CreateUserWizard1" CssClass="LoginButton" />
                             </td>
                         </tr>
                     </table>
