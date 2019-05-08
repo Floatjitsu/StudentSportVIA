@@ -71,7 +71,7 @@ public partial class Pages_ManageUsers : System.Web.UI.Page
         connection.Open();
 
 
-        string selectString = "INSERT INTO sports FROM users WHERE viaId=@viaId";
+        string selectString = "DELETE FROM users WHERE viaId=@viaId";
         SqlCommand selectCommand = new SqlCommand(selectString, connection);
 
         selectCommand.Parameters.AddWithValue("@viaId", Int32.Parse(UserSelected.Text));
